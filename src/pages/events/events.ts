@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { Today } from '../events/today';
+import { Tomorrow } from '../events/tomorrow';
 import { Article1Page } from '../news/articles/article1';
 import { News } from '../news/news';
 import { Headline1Page } from '../home/headlines/headline1/headline1';
@@ -27,7 +29,11 @@ export class Events {
   }
 
   btnClicked(){
-   this.navCtrl.setRoot(HomePage);
+   this.navCtrl.push(Today)
+   
+  }
+  btnClicked1(){
+   this.navCtrl.push(Tomorrow);
   }
 
   onInput(event){
