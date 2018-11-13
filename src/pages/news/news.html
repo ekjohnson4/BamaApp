@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
 
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
@@ -9,7 +9,7 @@
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
 
-    <ion-title>
+    <ion-title (click)="goHome()">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
 
@@ -18,15 +18,6 @@
 
 <ion-content>
   <div class="slides-header">
-    <!-- <ion-slides (ionSlideTap)="openArticle()" #slides autoplay="4000" loop="true" speed="500" centeredSlides="true">
-      <ion-slide style="width:100%" *ngFor="let slide of slidesInfo">
-        <img [src]="slide.image"/>
-        <div class="slides-text">
-          <h4 class="slide-article-header" [innerHTML]="slide.heading"></h4>
-          <p class="slide-article-paragraph" [innerHTML]="slide.paragraph"></p>
-        </div>
-      </ion-slide>
-    </ion-slides> -->
     <ion-slides #slides autoplay="4000" loop="true" speed="500" centeredSlides="true">
       <ion-slide tappable (click)="openArticle(1)" style="width:100%">
         <img src="../../assets/imgs/news1.jpg"/>
@@ -52,10 +43,10 @@
     </ion-slides>
   </div>
   <div class="top-stories">
-    <div>
+    <div class="header-box">
       <h4 id="top-stories-header">Top Stories</h4>
     </div>
-    <hr>
+  <hr>
   <div class="top-stories-button" tappable (click)="openNoSlideArticle(1)">
   <div class="top-stories-text">
     <h4 id="top-article-header">Evening Permit Requirement Suspended</h4>
@@ -78,6 +69,44 @@
     <p id="top-article-par">4 hours ago</p>
   </div>
   <div class="top-stories-image3"></div>
+</div>
+</div>
+
+<div class="top-stories">
+  <div class="header-box">
+    <h4 id="top-stories-header">More News</h4>
+  </div>
+<hr>
+<div class="top-stories-button" tappable (click)="openNoSlideArticle(4)">
+<div class="top-stories-text">
+  <h4 id="top-article-header">Monthly Safety Reminder: What to do in Case of Severe Weather</h4>
+  <p id="top-article-par">8 hours ago</p>
+</div>
+<div class="more-news-image1"></div>
+</div>
+<hr>
+<div class="top-stories-button" tappable (click)="openNoSlideArticle(5)">
+<div class="top-stories-text">
+  <h4 id="top-article-header">UA Again Selected for National Vehicle Competition</h4>
+  <p id="top-article-par">2 hours ago</p>
+</div>
+<div class="more-news-image2"></div>
+</div>
+<hr>
+<div class="top-stories-button" tappable (click)="openNoSlideArticle(6)">
+<div class="top-stories-text">
+  <h4 id="top-article-header">Wells Fargo, VMA Team to Provide Shuttles for Disabled Student Vets</h4>
+  <p id="top-article-par">4 hours ago</p>
+</div>
+<div class="more-news-image3"></div>
+</div>
+<hr>
+<div class="top-stories-button" tappable (click)="openNoSlideArticle(7)">
+<div class="top-stories-text">
+  <h4 id="top-article-header">2018 UA United Way Campaign Enters Home Stretch</h4>
+  <p id="top-article-par">4 hours ago</p>
+</div>
+<div class="more-news-image4"></div>
 </div>
 </div>
 </ion-content>

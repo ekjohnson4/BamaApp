@@ -27,6 +27,10 @@ import { Article3Page } from '../pages/news/articles/article3';
 import { Article4Page } from '../pages/news/articles/article4';
 import { Article5Page } from '../pages/news/articles/article5';
 import { Article6Page } from '../pages/news/articles/article6';
+import { Article7Page } from '../pages/news/articles/article7';
+import { Article8Page } from '../pages/news/articles/article8';
+import { Article9Page } from '../pages/news/articles/article9';
+import { Article10Page } from '../pages/news/articles/article10';
 
 @NgModule({
   declarations: [
@@ -52,7 +56,11 @@ import { Article6Page } from '../pages/news/articles/article6';
     Headline3Page,
     Article4Page,
     Article5Page,
-    Article6Page
+    Article6Page,
+    Article7Page,
+    Article8Page,
+    Article9Page,
+    Article10Page
   ],
   imports: [
     BrowserModule,
@@ -82,7 +90,11 @@ import { Article6Page } from '../pages/news/articles/article6';
     Headline3Page,
     Article4Page,
     Article5Page,
-    Article6Page
+    Article6Page,
+    Article7Page,
+    Article8Page,
+    Article9Page,
+    Article10Page
   ],
   providers: [
     StatusBar,

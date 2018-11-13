@@ -1,9 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { HomePage } from '../../home/home';
 
 /**
- * Generated class for the Article4Page page.
+ * Generated class for the Article7Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,17 +11,16 @@ import { HomePage } from '../../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-article4',
-  templateUrl: 'article4.html',
+  selector: 'page-article7',
+  templateUrl: 'article7.html',
 })
-export class Article4Page {
-  @ViewChild(Content) content: Content;
+export class Article7Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Article4Page');
+    console.log('ionViewDidLoad Article7Page');
   }
   
   goBack() {
@@ -31,12 +30,8 @@ export class Article4Page {
     });
     loading.present();
     
+    console.log('Article7Page back button pressed');
     this.navCtrl.pop();
-    console.log('Article4Page back button pressed')
-  }
-  
-  goTop() {
-    this.content.scrollToTop();
   }
   
   goHome() {
