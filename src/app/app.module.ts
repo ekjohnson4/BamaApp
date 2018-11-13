@@ -14,6 +14,10 @@ import { HomePage } from '../pages/home/home';
 import { HomePage2 } from '../pages/home2/home2';
 import { CampusMap } from '../pages/campus-map/campus-map';
 import { Student } from '../pages/student/student';
+import { ActionCard } from '../pages/student/subpages/action-card/action-card';
+import { Grades } from '../pages/student/subpages/grades/grades';
+import { MyTickets } from '../pages/student/subpages/my-tickets/my-tickets';
+import { Schedule } from '../pages/student/subpages/schedule/schedule';
 import { CourseCatalog } from '../pages/course-catalog/course-catalog';
 import { Emergency } from '../pages/emergency/emergency';
 import { Transportation } from '../pages/transportation/transportation';
@@ -50,6 +54,10 @@ import { Article3Page } from '../pages/news/articles/article3';
     Headline1Page,
     Headline2Page,
     Headline3Page,
+    ActionCard,
+    Grades,
+    MyTickets,
+    Schedule
     Today,
     Tomorrow
   ],
