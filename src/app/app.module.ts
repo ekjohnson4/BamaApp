@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { DatePicker } from '@ionic-native/date-picker';
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
@@ -57,7 +56,7 @@ import { Article3Page } from '../pages/news/articles/article3';
     ActionCard,
     Grades,
     MyTickets,
-    Schedule
+    Schedule,
     Today,
     Tomorrow
   ],
@@ -88,12 +87,15 @@ import { Article3Page } from '../pages/news/articles/article3';
     Headline2Page,
     Headline3Page,
     Today,
-    Tomorrow
+    Tomorrow,
+    ActionCard,
+    Grades,
+    MyTickets,
+    Schedule
   ],
   providers: [
     StatusBar,
     SplashScreen,
-	DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
