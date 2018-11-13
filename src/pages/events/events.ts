@@ -19,4 +19,8 @@ export class Events {
   goToPage() {
     this.navCtrl.setRoot(HomePage);
   }
+
+  btnClicked(){
+   alert("not implemented");
+  }
 }
