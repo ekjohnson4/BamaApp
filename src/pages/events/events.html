@@ -18,9 +18,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-title>Events</ion-title>
+  <h3>Events</h3> 
   <button ion-button (click) = "btnClicked()"> Today </button>
-  <button ion-button (click) = "btnClicked()"> Tomorrow </button>
+  <button ion-button (click) = "btnClicked1()"> Tomorrow </button>
   <button ion-button (click) = "btnClicked()"> Select Date </button>
   
   <ion-searchbar
@@ -30,18 +30,21 @@
   placeholder="Search events"
   (ionCancel)="onCancel($event)">
   </ion-searchbar>
-  <ion-toolbar>
-    <ion-title>Upcoming Events</ion-title>
-  </ion-toolbar>  
-         <ion-slides autoplay="5000" loop="true" speed="500">
-    <ion-slide style="width:100%">
-      <img (click)="openArticle(3)" src='../../assets/imgs/event1home.jpg'>
-    </ion-slide>
-    <ion-slide style="width:100%">
-      <img (click)="openArticle(4)" src='../../assets/imgs/news1home.png'>
-    </ion-slide>
-    <ion-slide style="width:100%">
-      <img (click)="openArticle(5)" src='../../assets/imgs/news2home.jpg'>
-    </ion-slide>
-  </ion-slides>
+<h3>Upcoming Events</h3> 
+  <ion-item style="border-bottom: 1px solid grey">
+      <ion-icon name="calendar"></ion-icon>
+    November 19th, 2018
+  </ion-item>
+<p><a href="https://www.ua.edu/events/view/week/date/2018-11-19">08:30 AM - 12:00 PM New Staff Orientation</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">08:30 AM - 03:00 PM Take Our Children to Work Day</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:00 AM - 04:45 PM Exhibit: Black Belt Alabama</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:00 AM - 05:00 PM The Paul R. Jones Museum Presents: THE SHADOWS November 2nd-December 19th, 2018</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:00 AM - 05:00 PM VALIC Individual Counseling Sessions</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:30 AM - 12:00 PM UA Libraries/Graduate Student Association Publishing Workshop</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">12:00 PM - 01:00 PM Al-Anon Meeting</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">02:00 PM - 04:00 PM Free Flu Shots</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">03:30 PM - 04:00 PM Study Abroad 101</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">05:00 PM - 08:00 PM Alabama Types: Poets, Playwrights & Storytellers</a>
+<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">05:00 PM - 09:00 PM Jefferson County Alumni Chapter</a></p>
+        
 </ion-content>
