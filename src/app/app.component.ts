@@ -4,9 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
-import { Headline1Page } from '../pages/home/headlines/headline1/headline1';
-import { Headline2Page } from '../pages/home/headlines/headline2/headline2';
-import { Headline3Page } from '../pages/home/headlines/headline3/headline3';
 import { HomePage } from '../pages/home/home';
 import { HomePage2 } from '../pages/home2/home2';
 import { CampusMap } from '../pages/campus-map/campus-map';
@@ -43,13 +40,13 @@ export class MyApp {
       { title: 'Campus Map', component: CampusMap },
       { title: 'Student', component: Student },
       { title: 'Course Catalog', component: CourseCatalog },
+      { title: 'News', component: News },
       { title: 'Emergency', component: Emergency },
       { title: 'Transportation', component: Transportation },
       { title: 'Campus Directory', component: CampusDirectory },
       { title: 'Laundry', component: Laundry },
       { title: 'Events', component: Events },
-      { title: 'Links', component: Links },
-      { title: 'News', component: News }
+      { title: 'Links', component: Links }
     ];
   }
 

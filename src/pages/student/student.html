@@ -9,7 +9,7 @@
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
 
-    <ion-title (click)="goToPage()">
+    <ion-title (click)="goToPage(1)">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
 
@@ -17,5 +17,11 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-title>Student</ion-title>
+  <h1>Student</h1>
+  <ion-list>
+     <ion-item (click)="goToPage(2)">Grades</ion-item>
+     <ion-item (click)="goToPage(3)">Schedule</ion-item>
+     <ion-item (click)="goToPage(4)">My Tickets</ion-item>
+     <ion-item (click)="goToPage(5)">Action Card</ion-item>
+  </ion-list>
 </ion-content>
