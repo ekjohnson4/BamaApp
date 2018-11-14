@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../../../home/home';
+import { HomePage } from '../../../../../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-my-tickets',
-  templateUrl: 'my-tickets.html',
+  selector: 'page-class1',
+  templateUrl: 'class1.html',
 })
-export class MyTickets {
+export class Class1 {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MyTickets');
+    console.log('ionViewDidLoad Class1');
   }
 
   goToPage() {
@@ -22,7 +22,6 @@ export class MyTickets {
 
   goBack() {
     this.navCtrl.pop();
-    console.log('MyTickets back button pressed')
+    console.log('Class1 back button pressed')
   }
-
 }

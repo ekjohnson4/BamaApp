@@ -22,7 +22,7 @@ export class Schedule {
 
   goBack() {
     this.navCtrl.pop();
-    console.log('Article1Page back button pressed')
+    console.log('Schedule back button pressed')
   }
 
 }

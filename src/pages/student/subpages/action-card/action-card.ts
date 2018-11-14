@@ -22,7 +22,7 @@ export class ActionCard {
 
   goBack() {
     this.navCtrl.pop();
-    console.log('Article1Page back button pressed')
+    console.log('ActionCard back button pressed')
   }
 
 }
