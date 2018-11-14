@@ -18,5 +18,9 @@ page-links {
   ion-content {
       text-align: center;
   }
+
+    ion-item:hover {
+  background-color: #f4f4f4 !important;
+  }
   background-color: white;
 }
