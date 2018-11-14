@@ -114,6 +114,17 @@ export class News {
     }
   }
   
+  goBack() {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+    
+    console.log('NewsPage back button pressed');
+    this.navCtrl.pop();
+  }
+  
   goHome() {
     let loading = this.loadingCtrl.create({
     content: 'Loading...',

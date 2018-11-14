@@ -51,7 +51,13 @@ export class MyApp {
   }
 
   openPage(page) {
-    this.nav.setRoot(page.component);
+    console.log("Page is " + page.title);
+    if(page.title == "Home") {
+      this.nav.setRoot(page.component);
+    }
+    else {
+      this.nav.push(page.component);
+    }
   }
 
 }
