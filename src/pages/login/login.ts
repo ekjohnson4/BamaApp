@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController} from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { HomePage2 } from '../home2/home2';
@@ -13,7 +13,7 @@ export class LoginPage {
   bamaId:string = '';
   password:string = '';
 
-  constructor(public navCtrl: NavController,  public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController,  public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
   }
 
   login(){
@@ -41,12 +41,24 @@ export class LoginPage {
       }
 
     else{
+      let loading = this.loadingCtrl.create({
+      content: 'Loading...',
+      dismissOnPageChange: true
+      });
+      loading.present();
+      
       this.navCtrl.setRoot(HomePage);
       this.navCtrl.popToRoot();
     }
   }
 
   notStudent(){
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+    
     this.navCtrl.setRoot(HomePage2);
     this.navCtrl.popToRoot();
   }
