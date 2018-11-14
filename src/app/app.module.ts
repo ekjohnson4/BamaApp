@@ -20,6 +20,8 @@ import { Class2 } from '../pages/student/subpages/grades/classes/class2/class2';
 import { Class3 } from '../pages/student/subpages/grades/classes/class3/class3';
 import { Class4 } from '../pages/student/subpages/grades/classes/class4/class4';
 import { MyTickets } from '../pages/student/subpages/my-tickets/my-tickets';
+import { Transfer } from '../pages/student/subpages/my-tickets/transfer/transfer';
+import { Donate } from '../pages/student/subpages/my-tickets/donate/donate';
 import { Schedule } from '../pages/student/subpages/schedule/schedule';
 import { CourseCatalog } from '../pages/course-catalog/course-catalog';
 import { Emergency } from '../pages/emergency/emergency';
@@ -64,6 +66,8 @@ import { Article3Page } from '../pages/news/articles/article3';
     Class3,
     Class4,
     MyTickets,
+    Transfer,
+    Donate,
     Schedule,
     Today,
     Tomorrow
@@ -103,6 +107,8 @@ import { Article3Page } from '../pages/news/articles/article3';
     Class3,
     Class4,
     MyTickets,
+    Transfer,
+    Donate,
     Schedule
   ],
   providers: [

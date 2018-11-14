@@ -9,7 +9,7 @@
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
 
-    <ion-title (click)="goToPage(1)">
+    <ion-title (click)="goToPage()">
       <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
     </ion-title>
 
@@ -21,13 +21,17 @@
     <img src="assets/imgs/event1home.jpg"/>
   </div>
 
-  <h1>My Tickets</h1>
-  <h3>Week 8 - Alabama vs Tennessee</h3>
-  <h4>Saturday October 20th, 2018<br></h4>
+  <h3>Transfer Ticket</h3>
+  <h6>Enter the MyBama ID of the person you wish to transfer to.</h6>
+
+  <ion-item padding center text-center>
+    <ion-input type="text" placeholder="MyBama ID" [(ngModel)]="bamaId"></ion-input>
+  </ion-item>
+
   <div style="margin: 10px 10px 10px 10px !important;">
-    <button padding ion-button full (click)="goToPage(2)">Transfer Ticket</button>
-    <button padding ion-button full (click)="goToPage(3)">Donate Ticket</button>
-  </div>
+    <button padding ion-button full (click)="transfer()">Transfer</button>
+</div>
+
 </ion-content>
 
 <ion-footer>

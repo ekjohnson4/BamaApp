@@ -9,7 +9,7 @@
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
 
-    <ion-title (click)="goToPage(1)">
+    <ion-title (click)="goToPage()">
       <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
     </ion-title>
 
@@ -21,13 +21,9 @@
     <img src="assets/imgs/event1home.jpg"/>
   </div>
 
-  <h1>My Tickets</h1>
-  <h3>Week 8 - Alabama vs Tennessee</h3>
-  <h4>Saturday October 20th, 2018<br></h4>
-  <div style="margin: 10px 10px 10px 10px !important;">
-    <button padding ion-button full (click)="goToPage(2)">Transfer Ticket</button>
-    <button padding ion-button full (click)="goToPage(3)">Donate Ticket</button>
-  </div>
+  <h3>Donate Ticket?</h3>
+  <button ion-button (click)="donate()">Yes</button>
+  <button ion-button (click)="goBack()">No</button>
 </ion-content>
 
 <ion-footer>

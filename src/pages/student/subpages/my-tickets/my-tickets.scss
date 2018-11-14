@@ -16,8 +16,17 @@ page-my-tickets {
   }
 
   ion-content {
-      text-align: center;
+    text-align: center;
   }
+
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  font-family: Helvetica;
   background-color: white;
 
   .footer-back {
