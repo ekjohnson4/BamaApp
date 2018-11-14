@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="black"></ion-icon>
+    </button>
+    
+    <button end ion-button menuToggle>
+      <ion-icon name="contact" color="black"></ion-icon>
+    </button>
+
+    <ion-title (click)="goHome()">
+      <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h1>Evening Permit Requirement Suspended</h1>
+  <div class="article-image">
+    <img src="assets/imgs/news4.jpg"/>
+  </div>
+  <ion-item style="border-bottom: 1px solid grey">
+    <ion-icon name="calendar"></ion-icon>
+    October 31st, 2018
+  </ion-item>
+  <h3>The evening parking permit requirement originally planned for spring semester has been suspended while a comprehensive master plan for campus parking is completed.</h3>
+
+<p>A working group comprised of faculty, student and staff representatives will be assembled and charged with conducting an in-depth evaluation of campus parking to provide a more inclusive process for reviewing, evaluating and recommending parking changes and priorities.
+
+<br><br>The goal is to develop a five-year master parking plan for the campus and help guide parking facility planning, growth and budgeting.
+
+<br><br>“An efficient and effective parking plan is the result of careful planning as we look toward the growth of our campus in alignment with resources available,” said Matthew Fajack, vice president for Finance and Operations. “To do that, we need representatives of our key constituents to take a deep-dive look into the challenges and opportunities of our parking resources and develop a plan for the future.”
+
+<br><br>The planning group, which will include members from the Student Government Association, Faculty Senate, retirees and other constituent groups, will be assembled and meet for the first time in Spring 2019.
+
+<br><br>All other parking permit requirements and information remain unchanged. Details are available at <a class="item" href="#" onclick="window.open('http://bamaparking.ua.edu', '_system', 'location=yes'); return false;">bamaparking.ua.edu</a>.</p>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button class="scrollTop" (click)="goTop()">Scroll to Top</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

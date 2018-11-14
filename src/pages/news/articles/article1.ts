@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { HomePage } from '../../home/home';
 
 /**
  * Generated class for the Article1Page page.
@@ -15,7 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Article1Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -23,8 +24,25 @@ export class Article1Page {
   }
   
   goBack() {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+    
+    console.log('Article1Page back button pressed');
     this.navCtrl.pop();
-    console.log('Article1Page back button pressed')
+  }
+  
+  goHome() {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+    
+    console.log('Title clicked');
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

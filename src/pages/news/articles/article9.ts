@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 import { HomePage } from '../../home/home';
 
 /**
- * Generated class for the Article3Page page.
+ * Generated class for the Article9Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,16 +11,16 @@ import { HomePage } from '../../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-article3',
-  templateUrl: 'article3.html',
+  selector: 'page-article9',
+  templateUrl: 'article9.html',
 })
-export class Article3Page {
+export class Article9Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Article3Page');
+    console.log('ionViewDidLoad Article9Page');
   }
   
   goBack() {
@@ -30,8 +30,8 @@ export class Article3Page {
     });
     loading.present();
     
+    console.log('Article9Page back button pressed');
     this.navCtrl.pop();
-    console.log('Article3Page back button pressed')
   }
   
   goHome() {

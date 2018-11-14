@@ -36,6 +36,13 @@ import { News } from '../pages/news/news';
 import { Article1Page } from '../pages/news/articles/article1';
 import { Article2Page } from '../pages/news/articles/article2';
 import { Article3Page } from '../pages/news/articles/article3';
+import { Article4Page } from '../pages/news/articles/article4';
+import { Article5Page } from '../pages/news/articles/article5';
+import { Article6Page } from '../pages/news/articles/article6';
+import { Article7Page } from '../pages/news/articles/article7';
+import { Article8Page } from '../pages/news/articles/article8';
+import { Article9Page } from '../pages/news/articles/article9';
+import { Article10Page } from '../pages/news/articles/article10';
 
 @NgModule({
   declarations: [
@@ -70,7 +77,14 @@ import { Article3Page } from '../pages/news/articles/article3';
     Donate,
     Schedule,
     Today,
-    Tomorrow
+    Tomorrow,
+    Article4Page,
+    Article5Page,
+    Article6Page,
+    Article7Page,
+    Article8Page,
+    Article9Page,
+    Article10Page
   ],
   imports: [
     BrowserModule,
@@ -109,7 +123,14 @@ import { Article3Page } from '../pages/news/articles/article3';
     MyTickets,
     Transfer,
     Donate,
-    Schedule
+    Schedule,
+    Article4Page,
+    Article5Page,
+    Article6Page,
+    Article7Page,
+    Article8Page,
+    Article9Page,
+    Article10Page
   ],
   providers: [
     StatusBar,
