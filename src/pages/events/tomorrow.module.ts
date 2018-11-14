@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { Tomorrow } from './events';
+import { Tomorrow } from './tomorrow';
 
 @NgModule({
   declarations: [
