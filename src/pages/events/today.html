@@ -1,15 +1,17 @@
+
 <ion-header>
   <ion-navbar>
 
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
     </button>
+    
 
     <button end ion-button menuToggle>
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
 
-    <ion-title (click)="goToPage(1)">
+    <ion-title (click)="goToPage()">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
 
@@ -17,11 +19,5 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>Student</h1>
-  <ion-list>
-     <ion-item (click)="goToPage(2)">Grades</ion-item>
-     <ion-item (click)="goToPage(3)">Schedule</ion-item>
-     <ion-item (click)="goToPage(4)">My Tickets</ion-item>
-     <ion-item (click)="goToPage(5)">Action Card</ion-item>
-  </ion-list>
+  <ion-title>Today's Events</ion-title>
 </ion-content>

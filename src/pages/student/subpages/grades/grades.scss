@@ -1,5 +1,4 @@
-page-student {
-
+page-grades {
   ion-navbar{
     .toolbar-background {
       background-color: #800020;
@@ -22,4 +21,8 @@ page-student {
 
   font-family: Helvetica;
   background-color: white;
+
+  .footer-back {
+    margin-left: 20px;
+  }
 }

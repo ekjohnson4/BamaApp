@@ -1,5 +1,4 @@
-page-student {
-
+page-schedule {
   ion-navbar{
     .toolbar-background {
       background-color: #800020;
@@ -16,10 +15,14 @@ page-student {
     }
   }
 
-  ion-item:hover {
-  background-color: #f4f4f4 !important;
+  ion-content {
+      text-align: center;
   }
-
+  
   font-family: Helvetica;
   background-color: white;
+
+  .footer-back {
+    margin-left: 20px;
+  }
 }

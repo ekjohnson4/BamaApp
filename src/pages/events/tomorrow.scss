@@ -1,4 +1,4 @@
-page-student {
+page-tomorrow {
 
   ion-navbar{
     .toolbar-background {
@@ -15,11 +15,9 @@ page-student {
     text-align: center;
     }
   }
-
-  ion-item:hover {
-  background-color: #f4f4f4 !important;
+  ion-content {
+      text-align: center;
   }
 
-  font-family: Helvetica;
   background-color: white;
 }

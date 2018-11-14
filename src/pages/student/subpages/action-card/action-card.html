@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="black"></ion-icon>
+    </button>
+
+    <button end ion-button menuToggle>
+      <ion-icon name="contact" color="black"></ion-icon>
+    </button>
+
+    <ion-title (click)="goToPage()">
+      <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Action Card</h1>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons start>
+      <div class="footer-back">
+        <button ion-button icon-only color="black" (click)="goBack()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
