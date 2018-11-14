@@ -28,6 +28,8 @@ import { CampusDirectory } from '../pages/campus-directory/campus-directory';
 import { Laundry } from '../pages/laundry/laundry';
 import { Events } from '../pages/events/events';
 import { Links } from '../pages/links/links';
+import { Today } from '../pages/events/today';
+import { Tomorrow } from '../pages/events/tomorrow';
 import { News } from '../pages/news/news';
 import { Article1Page } from '../pages/news/articles/article1';
 import { Article2Page } from '../pages/news/articles/article2';
@@ -62,7 +64,9 @@ import { Article3Page } from '../pages/news/articles/article3';
     Class3,
     Class4,
     MyTickets,
-    Schedule
+    Schedule,
+    Today,
+    Tomorrow
   ],
   imports: [
     BrowserModule,
@@ -90,6 +94,8 @@ import { Article3Page } from '../pages/news/articles/article3';
     Headline1Page,
     Headline2Page,
     Headline3Page,
+    Today,
+    Tomorrow,
     ActionCard,
     Grades,
     Class1,
