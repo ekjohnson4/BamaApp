@@ -16,7 +16,9 @@ export class Links {
     console.log('ionViewDidLoad Links');
   }
 
-  goToPage() {
+  goToPage(page) {
+    if(page == 1) {
     this.navCtrl.setRoot(HomePage);
+    }
   }
 }
