@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="black"></ion-icon>
+    </button>
+    
+    <button end ion-button menuToggle>
+      <ion-icon name="contact" color="black"></ion-icon>
+    </button>
+
+    <ion-title (click)="goHome()">
+      <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h1>2018 UA United Way Campaign Enters Home Stretch</h1>
+  <div class="article-image">
+    <img src="assets/imgs/news10.png"/>
+  </div>
+  <ion-item style="border-bottom: 1px solid grey">
+    <ion-icon name="calendar"></ion-icon>
+    November 12th, 2018
+  </ion-item>
+
+<p>All are invited to join the celebration Wednesday, Nov. 28, at 2 p.m. at the North Field Suite at Bryant-Denny Stadium (attendees should park in the Northwest lot and enter through Gate 3) as UA marks the conclusion of its 2018 United Way campaign.
+
+<br><br>“What a great start we have had to this year’s United Way campaign!” said Marie Robbins, associate athletics director/senior woman administrator and campaign co-chair.
+
+<br><br>Robbins thanked all who have already contributed to this year’s campaign. “This week is the fourth quarter though,” she continued, “and we need to finish strong in order to win our United Way championship! Everyone plays a role in the team’s success, so please contribute by returning your pledge card by this Friday, Nov. 16.”
+
+<br><br>With the approach of the start of the holiday season and the rush to the end of the semester, campus campaign officers want to remind UA employees that just a $60 commitment will seal their eligibility for a discount card that can save contributors more than that donation amount to the campaign over the next year at area businesses.
+
+<br><br>Donors can also designate their donations to a specific organization, ensuring a contribution to a cause of their choice.
+
+<br><br>Campaign coordinators hope that each employee who has not already done so chooses to make a difference through a campaign contribution, but reminds everyone that regardless of their choice, they must return their signed pledge card to their area’s coordinator by this Friday, Nov. 16, to ensure its inclusion in the final tally at the Nov. 28 celebration.
+
+<br><br>“Roll Tide and Champions United!” exclaimed Robbins.
+
+<br><br>For more information about the United Way campaign and United Way of West Alabama’s 26 partner agencies, visit <a class="item" href="#" onclick="window.open('http://communityaffairs.ua.edu/united-way/', '_system', 'location=yes'); return false;">http://communityaffairs.ua.edu/united-way/</a>.</p>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons start>
+      <div class="footer-back">
+        <button ion-button icon-only color="black" (click)="goBack()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
