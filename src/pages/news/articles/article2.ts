@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../../home/home';
 
 /**
@@ -15,6 +15,7 @@ import { HomePage } from '../../home/home';
   templateUrl: 'article2.html',
 })
 export class Article2Page {
+  @ViewChild(Content) content: Content;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
@@ -32,6 +33,10 @@ export class Article2Page {
     
     this.navCtrl.pop();
     console.log('Article2Page back button pressed')
+  }
+  
+  goTop() {
+    this.content.scrollToTop();
   }
   
   goHome() {
