@@ -17,5 +17,22 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-title>Laundry</ion-title>
+  <ion-title>University of Alabama Laundry</ion-title>
+  <ion-item>
+  <ion-label>Laundry Room</ion-label>
+  <ion-select [(ngModel)]="room">
+    <ion-option value="a">Burke</ion-option>
+    <ion-option value="b">Friedman</ion-option>
+    <ion-option value="c">Lakeside East - 2nd Floor</ion-option>
+    <ion-option value="d">Lakeside East - 4th Floor</ion-option>
+    <ion-option value="e">Lakeside West - 2nd Floor</ion-option>
+    <ion-option value="f">Lakeside West - 4th Floor</ion-option>
+    <ion-option value="g">Parham</ion-option>
+    <ion-option value="h">Paty</ion-option>
+    <ion-option value="i">Presidential</ion-option>
+    <ion-option value="j">Presidential Village II</ion-option>
+  </ion-select>
+</ion-item>
+
+<button ion-button (click) = "btnClicked()"> View Room </button>
 </ion-content>

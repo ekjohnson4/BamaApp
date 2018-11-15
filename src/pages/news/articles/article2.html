@@ -110,12 +110,13 @@ Regular schedule resumes Friday, Oct. 26.
 
 <ion-footer>
   <ion-toolbar>
-    <ion-buttons start>
-      <div class="footer-back">
-        <button ion-button icon-only color="black" (click)="goBack()">
-          <ion-icon name="arrow-back"></ion-icon>
-        </button>
-      </div>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button class="scrollTop" (click)="goTop()">Scroll to Top</button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
