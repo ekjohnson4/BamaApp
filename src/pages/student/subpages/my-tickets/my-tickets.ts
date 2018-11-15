@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Content  } from 'ionic-angular';
 import { HomePage } from '../../../home/home';
 import { Transfer } from './transfer/transfer';
 import { Donate } from './donate/donate';
@@ -10,8 +10,8 @@ import { Donate } from './donate/donate';
   templateUrl: 'my-tickets.html',
 })
 export class MyTickets {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Content) content: Content;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -19,6 +19,14 @@ export class MyTickets {
   }
 
   goToPage(page) {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Title clicked');
+
     if(page == 1) {
     this.navCtrl.setRoot(HomePage);
     }
@@ -31,8 +39,13 @@ export class MyTickets {
   }
 
   goBack() {
-    this.navCtrl.pop();
-    console.log('MyTickets back button pressed')
-  }
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
 
+    console.log('MyTickets back button pressed');
+    this.navCtrl.pop();
+  }
 }

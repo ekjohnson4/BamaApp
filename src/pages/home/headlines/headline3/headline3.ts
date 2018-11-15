@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../../home';
 
 @IonicPage()
@@ -8,20 +8,37 @@ import { HomePage } from '../../home';
   templateUrl: 'headline3.html',
 })
 export class Headline3Page {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Content) content: Content;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Headline3Page');
   }
 
-  goToPage() {
-    this.navCtrl.setRoot(HomePage);
+  goBack() {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Headline3 back button pressed');
+    this.navCtrl.pop();
   }
 
-  goBack() {
-    this.navCtrl.pop();
-    console.log('Article1Page back button pressed')
+  goTop() {
+    this.content.scrollToTop();
+  }
+
+  goHome() {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Title clicked');
+    this.navCtrl.setRoot(HomePage);
   }
 }

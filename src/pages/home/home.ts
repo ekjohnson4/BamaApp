@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Content  } from 'ionic-angular';
 import { Article1Page } from '../news/articles/article1';
 import { MyTickets } from '../student/subpages/my-tickets/my-tickets';
 import { ActionCard } from '../student/subpages/action-card/action-card';
@@ -14,8 +14,8 @@ import { Headline3Page } from './headlines/headline3/headline3';
   templateUrl: 'home.html',
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Content) content: Content;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -23,7 +23,14 @@ export class HomePage {
   }
 
   openArticle(article) {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
     console.log('Opening article ' + article);
+
     if(article == 1) {
       this.navCtrl.push(Article1Page);
     }
