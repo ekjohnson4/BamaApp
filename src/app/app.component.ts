@@ -55,7 +55,7 @@ export class MyApp {
     ];
     this.initializeItems();
   }
-  
+
   initializeItems() {
   	this.items = [
       { title: 'Home', component: HomePage },
@@ -92,17 +92,17 @@ export class MyApp {
       { title: 'Links', component: Links }
       ];
   }
-  
+
   openPage(real) {
     console.log("Page is " + real.title);
-    if(real.title == "Home") {
+    if(real.title === "Home") {
       this.nav.setRoot(real.component);
     }
     else {
       this.nav.push(real.component);
     }
   }
-  
+
   getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
