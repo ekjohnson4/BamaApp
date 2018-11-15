@@ -16,6 +16,10 @@ import { Laundry } from '../pages/laundry/laundry';
 import { Events } from '../pages/events/events';
 import { Links } from '../pages/links/links';
 import { News } from '../pages/news/news';
+import { Grades } from '../pages/student/subpages/grades/grades';
+import { Schedule } from '../pages/student/subpages/schedule/schedule';
+import { MyTickets } from '../pages/student/subpages/my-tickets/my-tickets';
+import { ActionCard } from '../pages/student/subpages/action-card/action-card';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,6 +30,7 @@ export class MyApp {
   rootPage:any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
+  items: string[];
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -48,10 +53,31 @@ export class MyApp {
       { title: 'Events', component: Events },
       { title: 'Links', component: Links }
     ];
+    this.initializeItems();
   }
   
   initializeItems() {
-    this.pages = [
+  	this.items = [
+      { title: 'Home', component: HomePage },
+      { title: 'Home', component: HomePage2 },
+      { title: 'Campus Map', component: CampusMap },
+      { title: 'Student', component: Student },
+      { title: 'Course Catalog', component: CourseCatalog },
+      { title: 'News', component: News },
+      { title: 'Emergency', component: Emergency },
+      { title: 'Transportation', component: Transportation },
+      { title: 'Campus Directory', component: CampusDirectory },
+      { title: 'Laundry', component: Laundry },
+      { title: 'Events', component: Events },
+      { title: 'Links', component: Links },
+      { title: 'Grades', component: Grades },
+      { title: 'Schedule', component: Schedule },
+      { title: 'My Tickets', component: MyTickets },
+      { title: 'Action Card', component: ActionCard }
+      ];
+  }
+    initializePages() {
+  	this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
@@ -64,31 +90,33 @@ export class MyApp {
       { title: 'Laundry', component: Laundry },
       { title: 'Events', component: Events },
       { title: 'Links', component: Links }
-    ];
+      ];
   }
   
-  openPage(page) {
-    console.log("Page is " + page.title);
-    if(page.title == "Home") {
-      this.nav.setRoot(page.component);
+  openPage(real) {
+    console.log("Page is " + real.title);
+    if(real.title == "Home") {
+      this.nav.setRoot(real.component);
     }
     else {
-      this.nav.push(page.component);
+      this.nav.push(real.component);
     }
   }
   
-   getItems(ev: any) {
+  getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
+    this.initializePages();
 
     // set val to the value of the searchbar
     const val = ev.target.value;
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.pages = this.pages.filter((page) => {
-        return (page.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.items = this.items.filter((item) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
+      this.pages = this.items;
     }
   }
 
