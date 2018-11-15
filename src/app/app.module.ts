@@ -43,6 +43,7 @@ import { Article7Page } from '../pages/news/articles/article7';
 import { Article8Page } from '../pages/news/articles/article8';
 import { Article9Page } from '../pages/news/articles/article9';
 import { Article10Page } from '../pages/news/articles/article10';
+import { Burke } from '../pages/laundry/burke';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { Article10Page } from '../pages/news/articles/article10';
     Article7Page,
     Article8Page,
     Article9Page,
-    Article10Page
+    Article10Page,
+    Burke
   ],
   imports: [
     BrowserModule,
@@ -130,7 +132,8 @@ import { Article10Page } from '../pages/news/articles/article10';
     Article7Page,
     Article8Page,
     Article9Page,
-    Article10Page
+    Article10Page,
+    Burke
   ],
   providers: [
     StatusBar,
