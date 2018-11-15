@@ -96,7 +96,7 @@ initializePages() {
 
   openPage(real) {
     console.log("Page is " + real.title);
-    if(real.title === "Home") {
+    if(real.title == "Home") {
       this.nav.setRoot(real.component);
     }
     else {
