@@ -22,7 +22,7 @@ import { News } from '../pages/news/news';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
+  searchQuery: string = '';
   rootPage:any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
@@ -49,7 +49,24 @@ export class MyApp {
       { title: 'Links', component: Links }
     ];
   }
-
+  
+  initializeItems() {
+    this.pages = [
+      { title: 'Home', component: HomePage },
+      { title: 'Home', component: HomePage2 },
+      { title: 'Campus Map', component: CampusMap },
+      { title: 'Student', component: Student },
+      { title: 'Course Catalog', component: CourseCatalog },
+      { title: 'News', component: News },
+      { title: 'Emergency', component: Emergency },
+      { title: 'Transportation', component: Transportation },
+      { title: 'Campus Directory', component: CampusDirectory },
+      { title: 'Laundry', component: Laundry },
+      { title: 'Events', component: Events },
+      { title: 'Links', component: Links }
+    ];
+  }
+  
   openPage(page) {
     console.log("Page is " + page.title);
     if(page.title == "Home") {
@@ -57,6 +74,21 @@ export class MyApp {
     }
     else {
       this.nav.push(page.component);
+    }
+  }
+  
+   getItems(ev: any) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the searchbar
+    const val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.pages = this.pages.filter((page) => {
+        return (page.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
     }
   }
 
