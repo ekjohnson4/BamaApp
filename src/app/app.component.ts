@@ -31,6 +31,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
   items: string[];
+  test: string[];
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -57,7 +58,7 @@ export class MyApp {
   }
 
   initializeItems() {
-  	this.items = [
+    this.items = [
       { title: 'Home', component: HomePage },
       { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
@@ -76,8 +77,8 @@ export class MyApp {
       { title: 'Action Card', component: ActionCard }
       ];
   }
-    initializePages() {
-  	this.pages = [
+initializePages() {
+    this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
