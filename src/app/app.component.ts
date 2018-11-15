@@ -30,8 +30,7 @@ export class MyApp {
   rootPage:any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
-  items: string[];
-  test: string[];
+  items: Array<{title: string, component: any}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -54,11 +53,29 @@ export class MyApp {
       { title: 'Events', component: Events },
       { title: 'Links', component: Links }
     ];
+    this.items = [
+      { title: 'Home', component: HomePage },
+      { title: 'Home', component: HomePage2 },
+      { title: 'Campus Map', component: CampusMap },
+      { title: 'Student', component: Student },
+      { title: 'Course Catalog', component: CourseCatalog },
+      { title: 'News', component: News },
+      { title: 'Emergency', component: Emergency },
+      { title: 'Transportation', component: Transportation },
+      { title: 'Campus Directory', component: CampusDirectory },
+      { title: 'Laundry', component: Laundry },
+      { title: 'Events', component: Events },
+      { title: 'Links', component: Links },
+      { title: 'Grades', component: Grades },
+      { title: 'Schedule', component: Schedule },
+      { title: 'My Tickets', component: MyTickets },
+      { title: 'Action Card', component: ActionCard }
+      ];
     this.initializeItems();
   }
   
   initializeItems() {
-    this.items = [
+  	this.items = [
       { title: 'Home', component: HomePage },
       { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
@@ -78,7 +95,7 @@ export class MyApp {
       ];
   }
 initializePages() {
-    this.pages = [
+  	this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
