@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
     </button>
     <button end ion-button menuToggle="right">
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
-    <ion-title (click)="goToPage()">
+    <ion-title (click)="goToPage(1)">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
   </ion-navbar>
@@ -32,3 +32,13 @@
 
 <button ion-button (click) = "btnClicked1()"> View Room </button>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

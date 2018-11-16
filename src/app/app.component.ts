@@ -20,6 +20,8 @@ import { Grades } from '../pages/student/subpages/grades/grades';
 import { Schedule } from '../pages/student/subpages/schedule/schedule';
 import { MyTickets } from '../pages/student/subpages/my-tickets/my-tickets';
 import { ActionCard } from '../pages/student/subpages/action-card/action-card';
+import { Transfer } from '../pages/student/subpages/my-tickets/transfer/transfer';
+import { Donate } from '../pages/student/subpages/my-tickets/donate/donate';
 
 @Component({
   templateUrl: 'app.html'
@@ -68,9 +70,27 @@ export class MyApp {
       { title: 'Grades', component: Grades },
       { title: 'Schedule', component: Schedule },
       { title: 'My Tickets', component: MyTickets },
-      { title: 'Action Card', component: ActionCard }
+      { title: 'Action Card', component: ActionCard },
+      { title: 'Donate Ticket', component: Donate },
+      { title: 'Transfer Ticket', component: Transfer }
       ];
     this.initializeItems();
+  }
+
+  initializePages() {
+  	this.pages = [
+      { title: 'Home', component: HomePage },
+      { title: 'Campus Map', component: CampusMap },
+      { title: 'Student', component: Student },
+      { title: 'Course Catalog', component: CourseCatalog },
+      { title: 'News', component: News },
+      { title: 'Emergency', component: Emergency },
+      { title: 'Transportation', component: Transportation },
+      { title: 'Campus Directory', component: CampusDirectory },
+      { title: 'Laundry', component: Laundry },
+      { title: 'Events', component: Events },
+      { title: 'Links', component: Links }
+      ];
   }
 
   initializeItems() {
@@ -90,22 +110,9 @@ export class MyApp {
       { title: 'Grades', component: Grades },
       { title: 'Schedule', component: Schedule },
       { title: 'My Tickets', component: MyTickets },
-      { title: 'Action Card', component: ActionCard }
-      ];
-  }
-initializePages() {
-  	this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Campus Map', component: CampusMap },
-      { title: 'Student', component: Student },
-      { title: 'Course Catalog', component: CourseCatalog },
-      { title: 'News', component: News },
-      { title: 'Emergency', component: Emergency },
-      { title: 'Transportation', component: Transportation },
-      { title: 'Campus Directory', component: CampusDirectory },
-      { title: 'Laundry', component: Laundry },
-      { title: 'Events', component: Events },
-      { title: 'Links', component: Links }
+      { title: 'Action Card', component: ActionCard },
+      { title: 'Donate Ticket', component: Donate },
+      { title: 'Transfer Ticket', component: Transfer }
       ];
   }
 
