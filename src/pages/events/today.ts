@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
-
 @IonicPage()
 @Component({
   selector: 'page-today',
