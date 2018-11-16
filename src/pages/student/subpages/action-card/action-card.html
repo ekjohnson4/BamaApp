@@ -1,29 +1,65 @@
 <ion-header>
   <ion-navbar hideBackButton="true">
+
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
     </button>
-    <button end ion-button menuToggle="right">
+
+    <button end ion-button menuToggle>
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
-    <ion-title (click)="goToPage()">
+
+    <ion-title (click)="goHome()">
       <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
     </ion-title>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h1>Action Card</h1>
+<ion-content>
+  <div class="article-image">
+    <img src="assets/imgs/actioncard.PNG"/>
+  </div>
+  
+  <ion-card class="test" tappable (click)="openDiningDollars()">
+    <ion-card-content>
+      <div class="account1">
+        <div class="account-name">
+          <h1>Dining Dollars</h1>
+        </div>
+        <div class="account-amount">
+          <h1>$151.47 <ion-icon id="arrow-color" name="arrow-forward"></ion-icon></h1>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="test" tappable (click)="openBamaCash()">
+    <ion-card-content>
+      <div class="account1">
+        <div class="account-name">
+          <h1>Bama Cash</h1>
+        </div>
+        <div class="account-amount">
+          <h1>$35.00 <ion-icon id="arrow-color" name="arrow-forward"></ion-icon></h1>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+        
+  
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="showAlert()">
+      {{ item }}
+    </button>
+  </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-buttons start>
-      <div class="footer-back">
-        <button ion-button icon-only color="black" (click)="goBack()">
-          <ion-icon name="arrow-back"></ion-icon>
-        </button>
-      </div>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
