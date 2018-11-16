@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 @IonicPage()
@@ -8,15 +8,37 @@ import { HomePage } from '../home/home';
   templateUrl: 'campus-map.html',
 })
 export class CampusMap {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Content) content: Content;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CampusMap');
   }
 
-  goToPage() {
+  goToPage(page) {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Title clicked');
+
+    if(page == 1) {
     this.navCtrl.setRoot(HomePage);
+    }
+  }
+
+  goBack() {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Headline3 back button pressed');
+    this.navCtrl.pop();
   }
 }

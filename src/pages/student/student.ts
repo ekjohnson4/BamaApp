@@ -13,7 +13,8 @@ import { Schedule } from './subpages/schedule/schedule';
 })
 export class Student {
   @ViewChild(Content) content: Content;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
