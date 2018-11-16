@@ -1,6 +1,5 @@
-
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
 
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
@@ -10,7 +9,7 @@
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
 
-    <ion-title (click)="goToPage()">
+    <ion-title (click)="goToPage(1)">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
 
@@ -20,3 +19,13 @@
 <ion-content padding>
   <ion-title>Tomorrow's Events</ion-title>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

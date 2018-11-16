@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../../../home/home';
 import { Class1 } from './classes/class1/class1';
 import { Class2 } from './classes/class2/class2';

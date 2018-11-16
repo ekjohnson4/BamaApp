@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
     </button>
     <button end ion-button menuToggle="right">
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
-    <ion-title (click)="goToPage()">
+    <ion-title (click)="goToPage(1)">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
   </ion-navbar>
@@ -30,16 +30,25 @@
       <ion-icon name="calendar"></ion-icon>
     November 19th, 2018
   </ion-item>
-<p><a href="https://www.ua.edu/events/view/week/date/2018-11-19">08:30 AM - 12:00 PM New Staff Orientation</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">08:30 AM - 03:00 PM Take Our Children to Work Day</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:00 AM - 04:45 PM Exhibit: Black Belt Alabama</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:00 AM - 05:00 PM The Paul R. Jones Museum Presents: THE SHADOWS November 2nd-December 19th, 2018</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:00 AM - 05:00 PM VALIC Individual Counseling Sessions</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">09:30 AM - 12:00 PM UA Libraries/Graduate Student Association Publishing Workshop</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">12:00 PM - 01:00 PM Al-Anon Meeting</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">02:00 PM - 04:00 PM Free Flu Shots</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">03:30 PM - 04:00 PM Study Abroad 101</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">05:00 PM - 08:00 PM Alabama Types: Poets, Playwrights & Storytellers</a>
-<br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">05:00 PM - 09:00 PM Jefferson County Alumni Chapter</a></p>
-
+<p>  <a full (click)="news1()">08:30 AM - 12:00 PM  New Staff Orientation</a>
+<br><a full (click)="news2()">08:30 AM - 03:00 PM Take Our Children to Work Day</a>
+<br><a full (click)="news3()">09:00 AM - 04:45 PM Exhibit: Black Belt Alabama</a>
+<br><a full (click)="news4()">09:00 AM - 05:00 PM The Paul R. Jones Museum Presents: THE SHADOWS November 2nd-December 19th, 2018</a>
+<br><a full (click)="news5()">09:00 AM - 05:00 PM VALIC Individual Counseling Sessions</a>
+<br><a full (click)="news6()">09:30 AM - 12:00 PM UA Libraries/Graduate Student Association Publishing Workshop</a>
+<br><a full (click)="news7()">12:00 PM - 01:00 PM Al-Anon Meeting</a>
+<br><a full (click)="news8()">02:00 PM - 04:00 PM Free Flu Shots</a>
+<br><a full (click)="news9()">03:30 PM - 04:00 PM Study Abroad 101</a>
+<br><a full (click)="news10()">05:00 PM - 08:00 PM Alabama Types: Poets, Playwrights & Storytellers</a>
+<br><a full (click)="news11()">05:00 PM - 09:00 PM Jefferson County Alumni Chapter</a></p>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
