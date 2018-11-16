@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content, AlertController } from 'ionic-angular';
 import { HomePage } from '../../../../home/home';
+import { GlobalvarsProvider } from '../../../../../providers/globalvars/globalvars';
 
 @IonicPage()
 @Component({
@@ -12,7 +13,8 @@ export class Donate {
 
   @ViewChild(Content) content: Content;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+    public loadingCtrl: LoadingController, public alertCtrl: AlertController,
+    public global: GlobalvarsProvider) {
   }
 
   ionViewDidLoad() {
@@ -43,15 +45,18 @@ export class Donate {
   }
 
   donate(){
+    console.log("Ticket: " + this.global.ticket);
     let alert = this.alertCtrl.create({
       title:'Ticket Donated',
       subTitle:'Thank you for your donation! Your confirmation number is ' + this.confirmation.bold() +'.',
       buttons:[{text: 'Ok',
               handler: () => {
-              this.navCtrl.pop();
+              this.navCtrl.setRoot(HomePage);
               }
             }]
     });
     alert.present();
+    this.global.ticket = 0;
+    console.log("Ticket: " + this.global.ticket);
   }
 }

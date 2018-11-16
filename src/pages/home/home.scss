@@ -2,6 +2,13 @@ page-home {
   background-color: white;
   font-family: Helvetica;
 
+  ion-scroll[direction=x] {
+    width: 100vw;
+  }
+  ion-scroll[direction=y] {
+    height: 100vh;
+  }
+  
   ion-navbar{
     .toolbar-background {
       background-color: #800020;

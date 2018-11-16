@@ -46,6 +46,7 @@ import { Article10Page } from '../pages/news/articles/article10';
 import { Burke } from '../pages/laundry/burke';
 import { DiningDollars } from '../pages/student/subpages/action-card/dining-dollars';
 import { BamaCash } from '../pages/student/subpages/action-card/bama-cash';
+import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
 
 @NgModule({
   declarations: [
@@ -144,7 +145,9 @@ import { BamaCash } from '../pages/student/subpages/action-card/bama-cash';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalvarsProvider
   ]
 })
+
 export class AppModule {}

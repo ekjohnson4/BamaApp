@@ -7,6 +7,7 @@ import { News } from '../news/news';
 import { Headline1Page } from './headlines/headline1/headline1';
 import { Headline2Page } from './headlines/headline2/headline2';
 import { Headline3Page } from './headlines/headline3/headline3';
+import { GlobalvarsProvider } from '../../providers/globalvars/globalvars';
 
 @IonicPage()
 @Component({
@@ -14,14 +15,24 @@ import { Headline3Page } from './headlines/headline3/headline3';
   templateUrl: 'home.html',
 })
 export class HomePage {
+  ticket1:string = '';
+  ticket2:string = '';
   @ViewChild(Content) content: Content;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController, public global: GlobalvarsProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad MyTickets');
+    if(this.global.ticket === 1){
+      this.ticket1 = 'Alabama Vs. Tennessee';
+      this.ticket2 = 'Lower Bowl - Gate 23';
+    }
+    else{
+      this.ticket1 = 'No Ticket';
+      this.ticket2 = '--';
+    }
   }
 
   openArticle(article) {

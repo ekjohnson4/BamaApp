@@ -3,11 +3,6 @@ import { IonicPage, NavController, NavParams, LoadingController, Content } from 
 import { HomePage } from '../home/home';
 import { Today } from '../events/today';
 import { Tomorrow } from '../events/tomorrow';
-import { Article1Page } from '../news/articles/article1';
-import { News } from '../news/news';
-import { Headline1Page } from '../home/headlines/headline1/headline1';
-import { Headline2Page } from '../home/headlines/headline2/headline2';
-import { Headline3Page } from '../home/headlines/headline3/headline3';
 import { AlertController } from 'ionic-angular';
 
 @IonicPage()
@@ -59,7 +54,7 @@ export class Events {
     loading.present();
 
     console.log('Title clicked');
-    
+
     this.navCtrl.push(Tomorrow);
   }
 

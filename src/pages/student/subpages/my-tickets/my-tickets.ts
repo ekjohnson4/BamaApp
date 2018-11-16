@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Content, AlertController   } from 'ionic-angular';
 import { HomePage } from '../../../home/home';
 import { Transfer } from './transfer/transfer';
 import { Donate } from './donate/donate';
+import { GlobalvarsProvider } from '../../../../providers/globalvars/globalvars';
 
 @IonicPage()
 @Component({
@@ -10,31 +11,75 @@ import { Donate } from './donate/donate';
   templateUrl: 'my-tickets.html',
 })
 export class MyTickets {
+  ticket1:string = '';
   @ViewChild(Content) content: Content;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController, public global: GlobalvarsProvider,
+    public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyTickets');
+    if(this.global.ticket === 1){
+      this.ticket1 = 'Week 8 - Alabama vs Tennessee';
+    }
+    else{
+      this.ticket1 = 'No Ticket';
+    }
   }
 
   goToPage(page) {
-    let loading = this.loadingCtrl.create({
-    content: 'Loading...',
-    dismissOnPageChange: true
-    });
-    loading.present();
-
-    console.log('Title clicked');
-
     if(page == 1) {
-    this.navCtrl.setRoot(HomePage);
+      let loading = this.loadingCtrl.create({
+      content: 'Loading...',
+      dismissOnPageChange: true
+      });
+      loading.present();
+
+      console.log('Title clicked');
+      this.navCtrl.setRoot(HomePage);
     }
+
     else if(page == 2) {
-    this.navCtrl.push(Transfer);
+      if(this.global.ticket === 1){
+        let loading = this.loadingCtrl.create({
+        content: 'Loading...',
+        dismissOnPageChange: true
+        });
+        loading.present();
+
+        console.log('Title clicked');
+        this.navCtrl.push(Transfer);
+      }
+      else{
+        let alert = this.alertCtrl.create({
+          title:'Transfer Error',
+          subTitle:'No ticket..',
+          buttons:['OK']
+        });
+        alert.present();
+      }
     }
+
     else if(page == 3) {
-    this.navCtrl.push(Donate);
+      if(this.global.ticket === 1){
+        let loading = this.loadingCtrl.create({
+        content: 'Loading...',
+        dismissOnPageChange: true
+        });
+        loading.present();
+
+        console.log('Title clicked');
+        this.navCtrl.push(Donate);
+      }
+      else{
+        let alert = this.alertCtrl.create({
+          title:'Donate Error',
+          subTitle:'No ticket..',
+          buttons:['OK']
+        });
+        alert.present();
+      }
     }
   }
 
