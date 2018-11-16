@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { Article1Page } from '../news/articles/article1';
 import { MyTickets } from '../student/subpages/my-tickets/my-tickets';
 import { ActionCard } from '../student/subpages/action-card/action-card';
@@ -15,7 +15,9 @@ import { Headline3Page } from './headlines/headline3/headline3';
 })
 export class HomePage {
   @ViewChild(Content) content: Content;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {

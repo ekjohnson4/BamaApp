@@ -1,28 +1,23 @@
-
 <ion-header>
   <ion-navbar>
-
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
     </button>
-
-    <button end ion-button menuToggle>
+    <button end ion-button menuToggle="right">
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
-
     <ion-title (click)="goToPage()">
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
-
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Events</h3> 
+  <h3>Events</h3>
   <button ion-button (click) = "btnClicked()"> Today </button>
   <button ion-button (click) = "btnClicked1()"> Tomorrow </button>
   <button ion-button (click) = "btnClicked()"> Select Date </button>
-  
+
   <ion-searchbar
   [(ngModel)]="myInput"
   [showCancelButton]="shouldShowCancel"
@@ -30,7 +25,7 @@
   placeholder="Search events"
   (ionCancel)="onCancel($event)">
   </ion-searchbar>
-<h3>Upcoming Events</h3> 
+<h3>Upcoming Events</h3>
   <ion-item style="border-bottom: 1px solid grey">
       <ion-icon name="calendar"></ion-icon>
     November 19th, 2018
@@ -46,5 +41,5 @@
 <br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">03:30 PM - 04:00 PM Study Abroad 101</a>
 <br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">05:00 PM - 08:00 PM Alabama Types: Poets, Playwrights & Storytellers</a>
 <br><a href="https://www.ua.edu/events/view/week/date/2018-11-19">05:00 PM - 09:00 PM Jefferson County Alumni Chapter</a></p>
-        
+
 </ion-content>

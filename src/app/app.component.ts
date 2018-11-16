@@ -28,6 +28,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   searchQuery: string = '';
   rootPage:any = LoginPage;
+  fontSize: number = 3;
 
   pages: Array<{title: string, component: any}>;
   items: Array<{title: string, component: any}>;
@@ -41,7 +42,6 @@ export class MyApp {
     });
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
       { title: 'Student', component: Student },
       { title: 'Course Catalog', component: CourseCatalog },
@@ -55,7 +55,6 @@ export class MyApp {
     ];
     this.items = [
       { title: 'Home', component: HomePage },
-      { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
       { title: 'Student', component: Student },
       { title: 'Course Catalog', component: CourseCatalog },
@@ -97,7 +96,6 @@ export class MyApp {
 initializePages() {
   	this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Home', component: HomePage2 },
       { title: 'Campus Map', component: CampusMap },
       { title: 'Student', component: Student },
       { title: 'Course Catalog', component: CourseCatalog },
@@ -138,4 +136,7 @@ initializePages() {
     }
   }
 
+  onChange() {
+    console.log(this.fontSize);
+  }
 }

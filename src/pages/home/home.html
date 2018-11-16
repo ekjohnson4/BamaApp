@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu" color="black"></ion-icon>
     </button>
-    <button end ion-button menuToggle>
+    <button end ion-button menuToggle="right">
       <ion-icon name="contact" color="black"></ion-icon>
     </button>
     <ion-title>
@@ -13,7 +13,6 @@
 </ion-header>
 
 <ion-content no-bounce>
-
   <ion-slides autoplay="5000" loop="true" speed="500">
     <ion-slide style="width:100%">
       <img (click)="openArticle(2)" src='../../assets/imgs/event1home.jpg'>
@@ -43,7 +42,7 @@
     </div>
 
     <div class="action-box">
-      <img width="90%" (click)="openArticle(6)" src='../../assets/imgs/actioncard.png' alt="Ticket">
+      <img width="90%" (click)="openArticle(6)" src='../../assets/imgs/actioncard.PNG' alt="ActionCard">
       <font> <b>Bama Cash:</b> <font color="#808080">$35.00</font><br></font>
       <font> <b>Dining Dollars:</b> <font color="#808080">$151.47</font></font>
     </div>
@@ -61,5 +60,4 @@
         <div class="bottom-left-headline">New Grad Program Integrates Data Analysis, Business Applications</div>
       </div>
     </div>
-
 </ion-content>
