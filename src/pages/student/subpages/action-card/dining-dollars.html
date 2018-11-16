@@ -1,0 +1,173 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="black"></ion-icon>
+    </button>
+
+    <button end ion-button menuToggle>
+      <ion-icon name="contact" color="black"></ion-icon>
+    </button>
+
+    <ion-title (click)="goHome()">
+      <img width="45" height="45" src='../../../assets/imgs/logo2.png'>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="article-image">
+    <img src="assets/imgs/actioncard.PNG"/>
+  </div>
+  <ion-card class="balance-card">
+    <ion-card-content>
+      <h1 style="color: white;font-weight: bold;">Dining Dollars</h1>
+      <h1 style="color: white">Balance: $151.47</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-row>
+        <ion-col>
+          <h1>Transaction/Date</h1>
+        </ion-col>
+        <ion-col>
+          <h1>Amount</h1>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <hr>
+    <ion-list>
+      <ion-row>
+        <ion-col>
+          <h2>Chick-fil-A</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $8.71</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">11/15/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Panda Express</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $7.91</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">11/9/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Subway</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $6.54</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">11/2/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Wendy's</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $7.34</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">10/30/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Lakeside Dining</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $5.57</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">10/28/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Fresh Foods Co.</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $4.80</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">10/24/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Chick-fil-A</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $6.54</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">10/19/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Chick-fil-A</h2>
+        </ion-col>
+        <ion-col>
+          <h2 id="amount">- $7.49</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 id="date">10/15/18</h2>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
