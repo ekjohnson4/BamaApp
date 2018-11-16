@@ -1,4 +1,5 @@
-page-action-card {
+page-dining-dollars {
+
   ion-navbar{
     .toolbar-background {
       background-color: #800020;
@@ -14,41 +15,20 @@ page-action-card {
     text-align: center;
     }
   }
-
   ion-content {
       text-align: center;
   }
   
-  .account1 {
-    display: flex;
+  .balance-card {
+    background-color: #800020;
+    text-align: left
   }
   
-  .test:active {
-    background-color: #E8E8E8;
-  }
-  
-  .account1:active {
-    background-color: #E8E8E8;
-  }
-  
-  .account-name {
-    text-align: left;
-    width: 60%;
-  }
-  
-  .account-amount {
-    float: left;
-    width: 40%;
-    text-align: right;
+  #amount {
     color: green;
   }
   
-  .article-image {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #arrow-color {
+  #date {
     color: color($colors, secondary);
   }
   font-family: Helvetica;
