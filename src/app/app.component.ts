@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -13,7 +13,7 @@ import { Emergency } from '../pages/emergency/emergency';
 import { Transportation } from '../pages/transportation/transportation';
 import { CampusDirectory } from '../pages/campus-directory/campus-directory';
 import { Laundry } from '../pages/laundry/laundry';
-import { Events } from '../pages/events/events';
+import { CampusEvents } from '../pages/events/events';
 import { Links } from '../pages/links/links';
 import { News } from '../pages/news/news';
 import { Grades } from '../pages/student/subpages/grades/grades';
@@ -31,92 +31,104 @@ export class MyApp {
   searchQuery: string = '';
   rootPage:any = LoginPage;
   fontSize: number = 3;
+  // whether to display menu for student or visitor (0=student, 1=visitor)
+  menuToggle: number = 0;
 
   pages: Array<{title: string, component: any}>;
   items: Array<{title: string, component: any}>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public eventMenu: Events) {
+    
+    // listen on event to determine which menu to display
+    this.eventMenu.subscribe('visitor:login', (data) =>{
+      this.menuToggle = data;
+      console.log('menuToggle is ' + this.menuToggle);
+      this.initializePages();
+      this.initializeItems();
+  });
+    // listen on event to determine which home page to open (only for pages that are part of student and visitor login menu)
+    this.eventMenu.subscribe('go:home', () =>{
+      this.openPage(this.pages[0]);
+  });
+    
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleLightContent();
       splashScreen.hide();
     });
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Campus Map', component: CampusMap },
-      { title: 'Student', component: Student },
-      { title: 'Course Catalog', component: CourseCatalog },
-      { title: 'News', component: News },
-      { title: 'Emergency', component: Emergency },
-      { title: 'Transportation', component: Transportation },
-      { title: 'Campus Directory', component: CampusDirectory },
-      { title: 'Laundry', component: Laundry },
-      { title: 'Events', component: Events },
-      { title: 'Links', component: Links }
-    ];
-    this.items = [
-      { title: 'Home', component: HomePage },
-      { title: 'Campus Map', component: CampusMap },
-      { title: 'Student', component: Student },
-      { title: 'Course Catalog', component: CourseCatalog },
-      { title: 'News', component: News },
-      { title: 'Emergency', component: Emergency },
-      { title: 'Transportation', component: Transportation },
-      { title: 'Campus Directory', component: CampusDirectory },
-      { title: 'Laundry', component: Laundry },
-      { title: 'Events', component: Events },
-      { title: 'Links', component: Links },
-      { title: 'Grades', component: Grades },
-      { title: 'Schedule', component: Schedule },
-      { title: 'My Tickets', component: MyTickets },
-      { title: 'Action Card', component: ActionCard },
-      { title: 'Donate Ticket', component: Donate },
-      { title: 'Transfer Ticket', component: Transfer }
-      ];
-    this.initializeItems();
   }
 
   initializePages() {
-  	this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Campus Map', component: CampusMap },
-      { title: 'Student', component: Student },
-      { title: 'Course Catalog', component: CourseCatalog },
-      { title: 'News', component: News },
-      { title: 'Emergency', component: Emergency },
-      { title: 'Transportation', component: Transportation },
-      { title: 'Campus Directory', component: CampusDirectory },
-      { title: 'Laundry', component: Laundry },
-      { title: 'Events', component: Events },
-      { title: 'Links', component: Links }
+    var toggle = this.menuToggle;
+    console.log('toggle value in initializePages is ' + toggle);
+    if(toggle == 0) {
+      this.pages = [
+        { title: 'Home', component: HomePage },
+        { title: 'Campus Map', component: CampusMap },
+        { title: 'Student', component: Student },
+        { title: 'Course Catalog', component: CourseCatalog },
+        { title: 'News', component: News },
+        { title: 'Emergency', component: Emergency },
+        { title: 'Transportation', component: Transportation },
+        { title: 'Campus Directory', component: CampusDirectory },
+        { title: 'Laundry', component: Laundry },
+        { title: 'Events', component: CampusEvents },
+        { title: 'Links', component: Links }
       ];
+    }
+    else {
+      this.pages = [
+        { title: 'Home', component: HomePage2 },
+        { title: 'Campus Map', component: CampusMap },
+        { title: 'News', component: News },
+        { title: 'Emergency', component: Emergency },
+        { title: 'Transportation', component: Transportation },
+        { title: 'Events', component: CampusEvents },
+        { title: 'Links', component: Links }
+      ];
+    }
   }
 
   initializeItems() {
-  	this.items = [
-      { title: 'Home', component: HomePage },
-      { title: 'Home', component: HomePage2 },
-      { title: 'Campus Map', component: CampusMap },
-      { title: 'Student', component: Student },
-      { title: 'Course Catalog', component: CourseCatalog },
-      { title: 'News', component: News },
-      { title: 'Emergency', component: Emergency },
-      { title: 'Transportation', component: Transportation },
-      { title: 'Campus Directory', component: CampusDirectory },
-      { title: 'Laundry', component: Laundry },
-      { title: 'Events', component: Events },
-      { title: 'Links', component: Links },
-      { title: 'Grades', component: Grades },
-      { title: 'Schedule', component: Schedule },
-      { title: 'My Tickets', component: MyTickets },
-      { title: 'Action Card', component: ActionCard },
-      { title: 'Donate Ticket', component: Donate },
-      { title: 'Transfer Ticket', component: Transfer }
+    var toggle = this.menuToggle;
+    console.log('toggle in initializeItems is ' + toggle);
+    if(toggle == 0) {
+  	   this.items = [
+         { title: 'Home', component: HomePage },
+         { title: 'Campus Map', component: CampusMap },
+         { title: 'Student', component: Student },
+         { title: 'Course Catalog', component: CourseCatalog },
+         { title: 'News', component: News },
+         { title: 'Emergency', component: Emergency },
+         { title: 'Transportation', component: Transportation },
+         { title: 'Campus Directory', component: CampusDirectory },
+         { title: 'Laundry', component: Laundry },
+         { title: 'Events', component: CampusEvents },
+         { title: 'Links', component: Links },
+         { title: 'Grades', component: Grades },
+         { title: 'Schedule', component: Schedule },
+         { title: 'My Tickets', component: MyTickets },
+         { title: 'Action Card', component: ActionCard },
+         { title: 'Donate Ticket', component: Donate },
+         { title: 'Transfer Ticket', component: Transfer }
       ];
+    }
+    else {
+      this.items = [
+        { title: 'Home', component: HomePage2 },
+        { title: 'Campus Map', component: CampusMap },
+        { title: 'News', component: News },
+        { title: 'Emergency', component: Emergency },
+        { title: 'Transportation', component: Transportation },
+        { title: 'Events', component: CampusEvents },
+        { title: 'Links', component: Links },
+        ];
+    }
   }
 
   openPage(real) {
+    this.initializePages();
     console.log("Page is " + real.title);
     if(real.title == "Home") {
       this.nav.setRoot(real.component);
@@ -127,6 +139,7 @@ export class MyApp {
   }
 
   getItems(ev: any) {
+    console.log('getting items');
     // Reset items back to all of the items
     this.initializeItems();
     this.initializePages();
@@ -145,5 +158,10 @@ export class MyApp {
 
   onChange() {
     console.log(this.fontSize);
+  }
+  
+  signIn() {
+    console.log("Going to login page");
+    this.nav.setRoot(LoginPage);
   }
 }

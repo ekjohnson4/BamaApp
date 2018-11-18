@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController, Events } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
-//import { HomePage2 } from '../home2/home2';
+import { HomePage2 } from '../home2/home2';
 
 @Component({
   selector: 'page-login',
@@ -13,7 +13,7 @@ export class LoginPage {
   bamaId:string = '';
   password:string = '';
 
-  constructor(public navCtrl: NavController,  public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController,  public alertCtrl: AlertController, public loadingCtrl: LoadingController, public eventMenu: Events) {
   }
 
   login(){
@@ -46,21 +46,22 @@ export class LoginPage {
       dismissOnPageChange: true
       });
       loading.present();
-
+      
+      this.eventMenu.publish('visitor:login', 0);
       this.navCtrl.setRoot(HomePage);
       this.navCtrl.popToRoot();
     }
   }
 
   notStudent(){
-    let alert = this.alertCtrl.create({
-      title:'Under construction...',
-      subTitle:'Coming Soon!',
-      buttons:['OK']
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
     });
-    alert.present();
-    return;
-    //this.navCtrl.setRoot(HomePage2);
-    //this.navCtrl.popToRoot();
+    loading.present();
+    
+    this.eventMenu.publish('visitor:login', 1);
+    this.navCtrl.setRoot(HomePage2);
+    this.navCtrl.popToRoot();
   }
 }

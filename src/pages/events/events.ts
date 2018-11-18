@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { IonicPage, NavController, NavParams, LoadingController, Content, Events } from 'ionic-angular';
 import { Today } from '../events/today';
 import { Tomorrow } from '../events/tomorrow';
 import { AlertController } from 'ionic-angular';
@@ -10,10 +9,10 @@ import { AlertController } from 'ionic-angular';
   selector: 'page-events',
   templateUrl: 'events.html',
 })
-export class Events {
+export class CampusEvents {
   @ViewChild(Content) content: Content;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,
-  public loadingCtrl: LoadingController) {
+  public loadingCtrl: LoadingController, public eventMenu: Events) {
   }
 
   ionViewDidLoad() {
@@ -30,7 +29,7 @@ export class Events {
     console.log('Title clicked');
 
     if(page == 1) {
-    this.navCtrl.setRoot(HomePage);
+    this.eventMenu.publish('go:home');
     }
   }
 

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Events } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
-import { HomePage } from '../home/home';
 import { Article1Page } from './articles/article1';
 import { Article2Page } from './articles/article2';
 import { Article3Page } from './articles/article3';
@@ -28,7 +27,7 @@ import { Article10Page } from './articles/article10';
 })
 export class News {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public eventMenu: Events) {
   }
   
   @ViewChild('slides') slides: Slides;
@@ -132,7 +131,7 @@ export class News {
     });
     loading.present();
     
-    this.navCtrl.setRoot(HomePage);
+    this.eventMenu.publish('go:home');
   }
 
 }
