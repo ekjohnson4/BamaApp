@@ -28,7 +28,7 @@ import { Emergency } from '../pages/emergency/emergency';
 import { Transportation } from '../pages/transportation/transportation';
 import { CampusDirectory } from '../pages/campus-directory/campus-directory';
 import { Laundry } from '../pages/laundry/laundry';
-import { Events } from '../pages/events/events';
+import { CampusEvents } from '../pages/events/events';
 import { Links } from '../pages/links/links';
 import { Today } from '../pages/events/today';
 import { Tomorrow } from '../pages/events/tomorrow';
@@ -61,7 +61,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Transportation,
     CampusDirectory,
     Laundry,
-    Events,
+    CampusEvents,
     Links,
     News,
     Article1Page,
@@ -110,7 +110,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Transportation,
     CampusDirectory,
     Laundry,
-    Events,
+    CampusEvents,
     Links,
     News,
     Article1Page,

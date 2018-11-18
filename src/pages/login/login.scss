@@ -19,7 +19,8 @@ page-login {
   a {
     color: secondary;
   }
-  a:hover {
+  a:active {
     color: primary;
+    background-color: #E8E8E8;
   }
 }
