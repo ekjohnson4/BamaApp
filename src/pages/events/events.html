@@ -18,13 +18,6 @@
   <button ion-button (click) = "btnClicked1()"> Tomorrow </button>
   <button ion-button (click) = "btnClicked()"> Select Date </button>
 
-  <ion-searchbar
-  [(ngModel)]="myInput"
-  [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)"
-  placeholder="Search events"
-  (ionCancel)="onCancel($event)">
-  </ion-searchbar>
 <h3>Upcoming Events</h3>
   <ion-item style="border-bottom: 1px solid grey">
       <ion-icon name="calendar"></ion-icon>
