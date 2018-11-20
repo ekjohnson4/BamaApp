@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Content, Events, AlertController } from 'ionic-angular';
 import { Today } from '../events/today';
 import { Tomorrow } from '../events/tomorrow';
-import { AlertController } from 'ionic-angular';
+import { Week } from '../events/week';
 
 @IonicPage()
 @Component({
@@ -45,6 +45,7 @@ export class CampusEvents {
     this.navCtrl.push(Today)
 
   }
+
   btnClicked1(){
     let loading = this.loadingCtrl.create({
     content: 'Loading...',
@@ -55,6 +56,18 @@ export class CampusEvents {
     console.log('Title clicked');
 
     this.navCtrl.push(Tomorrow);
+  }
+
+  btnClicked2(){
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Title clicked');
+
+    this.navCtrl.push(Week);
   }
 
   onInput(event){

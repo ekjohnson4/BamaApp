@@ -1,20 +1,32 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content, Events } from 'ionic-angular';
-import { HomePage } from '../../home';
 
 @IonicPage()
 @Component({
-  selector: 'page-headline2',
-  templateUrl: 'headline2.html',
+  selector: 'page-week',
+  templateUrl: 'week.html',
 })
-export class Headline2Page {
+export class Week {
   @ViewChild(Content) content: Content;
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController, public eventMenu: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public eventMenu: Events) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Headline2Page');
+    console.log('ionViewDidLoad Tomorrow');
+  }
+
+  goToPage(page) {
+    let loading = this.loadingCtrl.create({
+    content: 'Loading...',
+    dismissOnPageChange: true
+    });
+    loading.present();
+
+    console.log('Title clicked');
+
+    if(page == 1) {
+    this.eventMenu.publish('go:home');
+    }
   }
 
   goBack() {
@@ -24,21 +36,7 @@ export class Headline2Page {
     });
     loading.present();
 
-    console.log('Headline2 back button pressed');
+    console.log('Headline3 back button pressed');
     this.navCtrl.pop();
-  }
-
-  goTop() {
-    this.content.scrollToTop();
-  }
-
-  goHome() {
-    let loading = this.loadingCtrl.create({
-    content: 'Loading...',
-    dismissOnPageChange: true
-    });
-    loading.present();
-
-    this.eventMenu.publish('go:home');
   }
 }

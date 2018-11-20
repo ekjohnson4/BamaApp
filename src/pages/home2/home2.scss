@@ -1,5 +1,14 @@
 page-home2 {
-  
+  background-color: white;
+  font-family: Helvetica;
+
+  ion-scroll[direction=x] {
+    width: 100vw;
+  }
+  ion-scroll[direction=y] {
+    height: 100vh;
+  }
+
   ion-navbar{
     .toolbar-background {
       background-color: #800020;
@@ -15,8 +24,112 @@ page-home2 {
     text-align: center;
     }
   }
-  ion-content {
-      text-align: center;
+
+  ion-slides.slides {
+    height: auto;
+    width: 100% !important;
   }
-  background-color: white;
+
+  header{
+    .bar.bar-subheader1 {
+      height: 40%;
+      width: 45vw;
+      text-align: middle;
+      background-color: #800020;
+      float: left;
+      padding: 2.5%;
+      border: 2px solid black;
+      border-bottom: none;
+      margin-left: 3%;
+    }
+
+    .bar.bar-subheader2 {
+      height: 40%;
+      width: 45vw;
+      text-align: middle;
+      background-color: #800020;
+      float: left;
+      padding: 2.5%;
+      display: inline;
+      border: 2px solid black;
+      border-bottom: none;
+      margin-left: 3%;
+    }
+
+    .bar.bar-subheader3 {
+      height: 40%;
+      width: 93vw;
+      text-align: middle;
+      background-color: #800020;
+      float: left;
+      padding: 2.5%;
+      display: inline;
+      border: 2px solid black;
+      border-bottom: none;
+      margin-left: 3%;
+      margin-top: 2%;
+    }
+  }
+
+  .ticket-box{
+      float: left;
+      width: 45vw;
+      height: 45vw;
+      border: 2px solid black;
+      margin-left: 3%;
+      font-size: 80%;
+      padding: 1%;
+    }
+
+  .ticket-box:active {
+    background-color: #E8E8E8;
+  }
+
+  .action-box{
+      float: left;
+      width: 45vw;
+      height: 45vw;
+      border: 2px solid black;
+      margin-left: 3%;
+      text-align: center;
+    }
+
+  .action-box:active {
+    background-color: #E8E8E8;
+  }
+
+  .news-box{
+      text-align: left;
+      font-size: 100%;
+      float: left;
+      width: 93vw;
+      height: 50vw;
+      position: relative;
+      border: 2px solid black;
+      margin-left: 3%;
+      margin-bottom: 2%;
+    }
+
+  .bottom-left-header {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+  .bottom-left-headline {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .news-text {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: white;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  }
 }

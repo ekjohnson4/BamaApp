@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Content, Events } from 'ionic-angular';
 import { HomePage } from '../../home';
 
 @IonicPage()
@@ -9,7 +9,8 @@ import { HomePage } from '../../home';
 })
 export class Headline3Page {
   @ViewChild(Content) content: Content;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController, public eventMenu: Events) {
   }
 
   ionViewDidLoad() {
@@ -38,7 +39,6 @@ export class Headline3Page {
     });
     loading.present();
 
-    console.log('Title clicked');
-    this.navCtrl.setRoot(HomePage);
+    this.eventMenu.publish('go:home');
   }
 }

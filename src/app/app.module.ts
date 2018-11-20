@@ -32,6 +32,7 @@ import { CampusEvents } from '../pages/events/events';
 import { Links } from '../pages/links/links';
 import { Today } from '../pages/events/today';
 import { Tomorrow } from '../pages/events/tomorrow';
+import { Week } from '../pages/events/week';
 import { News } from '../pages/news/news';
 import { Article1Page } from '../pages/news/articles/article1';
 import { Article2Page } from '../pages/news/articles/article2';
@@ -82,6 +83,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Schedule,
     Today,
     Tomorrow,
+    Week,
     Article4Page,
     Article5Page,
     Article6Page,
@@ -121,6 +123,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Headline3Page,
     Today,
     Tomorrow,
+    Week,
     ActionCard,
     Grades,
     Class1,

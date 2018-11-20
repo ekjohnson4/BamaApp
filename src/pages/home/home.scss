@@ -8,7 +8,7 @@ page-home {
   ion-scroll[direction=y] {
     height: 100vh;
   }
-  
+
   ion-navbar{
     .toolbar-background {
       background-color: #800020;
@@ -40,7 +40,7 @@ page-home {
       padding: 2.5%;
       border: 2px solid black;
       border-bottom: none;
-      margin-left: 3%;
+      margin-left: 3.5%;
     }
 
     .bar.bar-subheader2 {
@@ -66,7 +66,7 @@ page-home {
       display: inline;
       border: 2px solid black;
       border-bottom: none;
-      margin-left: 3%;
+      margin-left: 3.5%;
       margin-top: 2%;
     }
   }
@@ -77,10 +77,10 @@ page-home {
       height: auto;
       padding: 3%;
       border: 2px solid black;
-      margin-left: 3%;
+      margin-left: 3.5%;
       text-align: center;
     }
-    
+
   .ticket-box:active {
     background-color: #E8E8E8;
   }
@@ -94,7 +94,7 @@ page-home {
       margin-left: 3%;
       text-align: center;
     }
-    
+
   .action-box:active {
     background-color: #E8E8E8;
   }
@@ -103,11 +103,11 @@ page-home {
       text-align: left;
       font-size: 100%;
       float: left;
-      width: 93%;
+      width: 93vw;
       position: relative;
-      height: 32.75%;
+      height: 55vw;
       border: 2px solid black;
-      margin-left: 3%;
+      margin-left: 3.5%;
       margin-bottom: 2%;
     }
 
