@@ -19,7 +19,12 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-title>Campus Directory</ion-title>
+  <ion-list [virtualScroll]="names">
+    <ion-item *virtualItem="let item">
+      {{ item }}
+    </ion-item>
+
+  </ion-list>
 </ion-content>
 
 <ion-footer>

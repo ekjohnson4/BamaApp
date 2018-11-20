@@ -14,6 +14,7 @@ export class CampusDirectory {
   @ViewChild(Content) content: Content;
   searchInput: string = '';
   shouldShowCancel: boolean = true;
+  names: string[];
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public loadingCtrl: LoadingController, public http: HttpClient) {
   }
@@ -48,5 +49,24 @@ export class CampusDirectory {
   }
 
   search(event) {
+    let urlbase = "https://uaedu-prod.modolabs.net/people/search?search=Search&filter=";
+    let url = urlbase.concat(this.searchInput);
+    let headers = new HttpHeaders();
+    let responseHtml;
+    headers.append('Content-Type', 'text/html');
+    this.http.get(url,{headers: headers}).subscribe(
+      data => responseHtml=data,
+      err => console.log(err),
+      () => console.log('Completed')
+    );
+    console.log(responseHtml);
+    let parser = new DOMParser();
+    let parsedHtml = parser.parseFromString(responseHtml, 'text/html');
+    let rawElements = parsedHtml.getElementById('kgoui_Rcontent_I0_Rcontent_I0_Ritems').children;
+    for(let i = 0; i < rawElements.length; i++) {
+      let name = rawElements[i].getElementsByClassName('kgoui_list_item_title')[0].innerHTML;
+      this.names.push(name);
+    }
 
+  }
 }
