@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import {Http} from "@angular/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {concat} from "rxjs/operator/concat";
 
 @IonicPage()
 @Component({
@@ -9,8 +12,10 @@ import { HomePage } from '../home/home';
 })
 export class CampusDirectory {
   @ViewChild(Content) content: Content;
+  searchInput: string = '';
+  shouldShowCancel: boolean = true;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController, public http: HttpClient) {
   }
 
   ionViewDidLoad() {
@@ -41,4 +46,7 @@ export class CampusDirectory {
     console.log('Headline3 back button pressed');
     this.navCtrl.pop();
   }
+
+  search(event) {
+
 }

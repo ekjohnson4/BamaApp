@@ -10,6 +10,12 @@
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
   </ion-navbar>
+  <ion-searchbar
+    [(ngModel)]="searchInput"
+    [showCancelButton]="shouldShowCancel"
+    (change)= "search($event)"
+    placeholder="Search Campus Directory">
+  </ion-searchbar>
 </ion-header>
 
 <ion-content padding>
