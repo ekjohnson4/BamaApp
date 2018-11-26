@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import {ViewPerson} from "./view-person";
 
 
 @IonicPage()
@@ -64,6 +65,8 @@ export class CampusDirectory {
       this.header = 'No Results Found';
   }
   listClicked(name) {
-    
+    this.navCtrl.push(ViewPerson, {
+      name: name
+    });
   }
 }
