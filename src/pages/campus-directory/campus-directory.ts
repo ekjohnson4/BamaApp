@@ -49,24 +49,15 @@ export class CampusDirectory {
   }
 
   search(event) {
-    let urlbase = "https://uaedu-prod.modolabs.net/people/search?search=Search&filter=";
-    let url = urlbase.concat(this.searchInput);
-    let headers = new HttpHeaders();
-    let responseHtml;
-    headers.append('Content-Type', 'text/html');
-    this.http.get(url,{headers: headers}).subscribe(
-      data => responseHtml=data,
-      err => console.log(err),
-      () => console.log('Completed')
-    );
-    console.log(responseHtml);
-    let parser = new DOMParser();
-    let parsedHtml = parser.parseFromString(responseHtml, 'text/html');
-    let rawElements = parsedHtml.getElementById('kgoui_Rcontent_I0_Rcontent_I0_Ritems').children;
-    for(let i = 0; i < rawElements.length; i++) {
-      let name = rawElements[i].getElementsByClassName('kgoui_list_item_title')[0].innerHTML;
-      this.names.push(name);
-    }
-
+    this.names = [];
+    if(this.searchInput.toLowerCase() )
+    this.names.push("Nick Saban");
+    if(this.searchInput.toLowerCase() == "nick saban")
+      return;
+    this.names.push("Nick Johnson");
+    this.names.push("Nick Foster");
+    this.names.push("Nicky Shuster");
+    this.names.push("Nickolas Hester");
+    this.names.push("Nicklaus Freeman");
   }
 }
