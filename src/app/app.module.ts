@@ -48,6 +48,7 @@ import { Burke } from '../pages/laundry/burke';
 import { DiningDollars } from '../pages/student/subpages/action-card/dining-dollars';
 import { BamaCash } from '../pages/student/subpages/action-card/bama-cash';
 import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
+import {ViewPerson} from "../pages/campus-directory/view-person";
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Emergency,
     Transportation,
     CampusDirectory,
+    ViewPerson,
     Laundry,
     CampusEvents,
     Links,
