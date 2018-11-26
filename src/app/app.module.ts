@@ -113,6 +113,7 @@ import {ViewPerson} from "../pages/campus-directory/view-person";
     Emergency,
     Transportation,
     CampusDirectory,
+    ViewPerson,
     Laundry,
     CampusEvents,
     Links,
