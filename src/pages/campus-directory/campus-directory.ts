@@ -1,9 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import {Http} from "@angular/http";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {concat} from "rxjs/operator/concat";
+
 
 @IonicPage()
 @Component({
@@ -14,9 +12,11 @@ export class CampusDirectory {
   @ViewChild(Content) content: Content;
   searchInput: string = '';
   shouldShowCancel: boolean = true;
-  names: string[];
+  shouldAutocomplete: boolean = true;
+  header: string;
+  names: string[] = [];
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController, public http: HttpClient) {
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -50,14 +50,20 @@ export class CampusDirectory {
 
   search(event) {
     this.names = [];
-    if(this.searchInput.toLowerCase() )
-    this.names.push("Nick Saban");
     if(this.searchInput.toLowerCase() == "nick saban")
-      return;
-    this.names.push("Nick Johnson");
-    this.names.push("Nick Foster");
-    this.names.push("Nicky Shuster");
-    this.names.push("Nickolas Hester");
-    this.names.push("Nicklaus Freeman");
+      this.names.push("Nick Saban");
+    else if(this.searchInput.toLowerCase() == "nick") {
+      this.names.push("Nick Saban");
+      this.names.push("Nick Johnson");
+      this.names.push("Nick Foster");
+      this.names.push("Nicky Shuster");
+      this.names.push("Nickolas Hester");
+      this.names.push("Nicklaus Freeman");
+    }
+    else
+      this.header = 'No Results Found';
+  }
+  listClicked(name) {
+    
   }
 }

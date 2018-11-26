@@ -13,6 +13,7 @@
   <ion-searchbar
     [(ngModel)]="searchInput"
     [showCancelButton]="shouldShowCancel"
+    [autocorrect]="shouldAutocomplete"
     (change)= "search($event)"
     placeholder="Search Campus Directory">
   </ion-searchbar>
@@ -20,10 +21,12 @@
 
 <ion-content padding>
   <ion-list [virtualScroll]="names">
-    <ion-item *virtualItem="let item">
-      {{ item }}
-    </ion-item>
-
+      <ion-list-header>
+        {{ header }}
+      </ion-list-header>
+      <button ion-item *virtualItem="let name" (click)="listClicked(name)">
+        {{ name }}
+      </button>
   </ion-list>
 </ion-content>
 
