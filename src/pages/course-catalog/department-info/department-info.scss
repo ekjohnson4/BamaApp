@@ -1,4 +1,4 @@
-page-course-catalog {
+page-department-info {
 
   ion-navbar{
     .toolbar-background {
@@ -19,17 +19,11 @@ page-course-catalog {
       text-align: center;
   }
   
-  .header {
-    color: light;
-    text-align: left;
-    background-color: white;
-  }
-  
   .card-header {
     background-color: #800020;
     text-align: left;
   }
-  
+
   font-family: Helvetica;
   background-color: white;
 }
