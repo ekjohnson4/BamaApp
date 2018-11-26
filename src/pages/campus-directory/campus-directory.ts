@@ -51,10 +51,9 @@ export class CampusDirectory {
 
   search(event) {
     this.names = [];
-    if(this.searchInput.toLowerCase() == "nick saban")
+    if("nick saban".search(this.searchInput.toLowerCase()) != -1)
       this.names.push("Nick Saban");
-    else if(this.searchInput.toLowerCase() == "nick") {
-      this.names.push("Nick Saban");
+    if("nick".search(this.searchInput.toLowerCase()) != -1) {
       this.names.push("Nick Johnson");
       this.names.push("Nick Foster");
       this.names.push("Nicky Shuster");
