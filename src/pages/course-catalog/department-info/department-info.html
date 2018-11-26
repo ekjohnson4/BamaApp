@@ -19,10 +19,16 @@
       <h1 style="color: white;font-weight: bold;">Fall 2018</h1>
     </ion-card-content>
   </ion-card>
-  <ion-searchbar placeholder="Search course type" showCancelButton color="danger" (ionCancel)="onCancel($event)" (ionInput)="getDepartments($event)"></ion-searchbar>
+  <ion-card>
+    <ion-card-header>
+      <h1 style="color: white;font-weight: bold;">Selected department:</h1>
+      <p style="color: white;">{{departments}}</p>
+    </ion-card-header>
+  </ion-card>
+  <ion-searchbar placeholder="Search course number or name" showCancelButton color="danger" (ionCancel)="onCancel($event)" (ionInput)="getClasses($event)"></ion-searchbar>
   <ion-list>
-    <button ion-item *ngFor="let item of departments" (click)="openClasses(item)">
-      {{ item }}
+    <button ion-item *ngFor="let item of classList" (click)="openClassInfo(item)">
+      {{ item.title }}
     </button>
   </ion-list>
 </ion-content>

@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="black"></ion-icon>
+    </button>
+    <button end ion-button menuToggle="right">
+      <ion-icon name="contact" color="black"></ion-icon>
+    </button>
+    <ion-title (click)="goToPage(1)">
+      <img width="45" height="45" src='../../assets/imgs/logo2.png'>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title>Course Catalog</ion-title>
+  <ion-card class="card-header">
+    <ion-card-content>
+      <h1 style="color: white;font-weight: bold;">Fall 2018</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-card-header>
+        <h1 style="color: white;font-weight: bold;">Selected course:</h1>
+        <p style="color: white;">{{classData.title}}</p>
+      </ion-card-header>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Credits</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.credits}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>CRN</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.CRN}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Start Date</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.startDate}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>End Date</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.endDate}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Schedule</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.scheduleDate}}</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <h2>{{classData.scheduleTime}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Building</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.building}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Room</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.room}}</h2>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col>
+          <h2>Instructor</h2>
+        </ion-col>
+        <ion-col>
+          <h2>{{classData.instructor}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

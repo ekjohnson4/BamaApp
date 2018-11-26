@@ -47,6 +47,8 @@ import { Article10Page } from '../pages/news/articles/article10';
 import { Burke } from '../pages/laundry/burke';
 import { DiningDollars } from '../pages/student/subpages/action-card/dining-dollars';
 import { BamaCash } from '../pages/student/subpages/action-card/bama-cash';
+import { DepartmentInfo } from '../pages/course-catalog/department-info/department-info';
+import { ClassInfo } from '../pages/course-catalog/class-info/class-info';
 import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
 
 @NgModule({
@@ -93,7 +95,9 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Article10Page,
     Burke,
     DiningDollars,
-    BamaCash
+    BamaCash,
+    DepartmentInfo,
+    ClassInfo
   ],
   imports: [
     BrowserModule,
@@ -143,7 +147,9 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Article10Page,
     Burke,
     DiningDollars,
-    BamaCash
+    BamaCash,
+    DepartmentInfo,
+    ClassInfo
   ],
   providers: [
     StatusBar,
