@@ -13,18 +13,25 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item class="name">{{name}}</ion-item>
-  <ion-label>Department</ion-label>
-  <ion-item>{{department}}</ion-item>
-
-  <ion-label>Email</ion-label>
-  <button ion-item (click)="makeEmail(email)">{{email}}</button>
-
-  <ion-label>Phone</ion-label>
-  <button ion-item (click)="callPhone(phone)">{{phone}}</button>
-
-  <ion-label>Office</ion-label>
-  <ion-item>{{office}}</ion-item>
+  <ion-card>
+    <ion-card-header class="name">{{name}}</ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Department</ion-card-header>
+    <ion-card-content>{{department}}</ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Email</ion-card-header>
+    <ion-card-content (click)="makeEmail(email)">{{email}}</ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Phone</ion-card-header>
+    <ion-card-content (click)="callPhone(phone)">{{phone}}</ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Office</ion-card-header>
+    <ion-card-content>{{office}}</ion-card-content>
+  </ion-card>
 </ion-content>
 
 <ion-footer>
