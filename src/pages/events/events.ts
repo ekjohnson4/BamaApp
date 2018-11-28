@@ -77,7 +77,7 @@ export class CampusEvents {
   news1(){
         let alert = this.alertCtrl.create({
           title:'New Staff Orientation',
-          subTitle:'<b>Date:</b> Monday, November 19, 2018<br/><b>Time:</b> 08:30 AM - 12:00 PM<br/><b>Location:</b> Classroom Employee Resource Center',
+          subTitle:'<b>Date:</b> Monday, November 19, 2018<br/><b>Time:</b> 08:30 AM - 12:00 PM<br/><b>Location:</b> Classroom Employee Resource Center</br></br>New Staff Orientation welcomes new UA employees to campus life by introducing them to the people, places, programs, policies and benefits that make The University of Alabama a great place to work.',
           buttons:['Done']
         });
         alert.present();
