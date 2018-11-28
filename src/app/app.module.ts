@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import {CallNumber} from "@ionic-native/call-number";
+import {EmailComposer} from "@ionic-native/email-composer";
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
@@ -50,6 +52,8 @@ import { BamaCash } from '../pages/student/subpages/action-card/bama-cash';
 import { DepartmentInfo } from '../pages/course-catalog/department-info/department-info';
 import { ClassInfo } from '../pages/course-catalog/class-info/class-info';
 import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
+import {ViewPerson} from "../pages/campus-directory/view-person";
+
 
 @NgModule({
   declarations: [
@@ -63,6 +67,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Emergency,
     Transportation,
     CampusDirectory,
+    ViewPerson,
     Laundry,
     CampusEvents,
     Links,
@@ -115,6 +120,7 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     Emergency,
     Transportation,
     CampusDirectory,
+    ViewPerson,
     Laundry,
     CampusEvents,
     Links,
@@ -155,7 +161,9 @@ import { GlobalvarsProvider } from '../providers/globalvars/globalvars';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GlobalvarsProvider
+    GlobalvarsProvider,
+    CallNumber,
+    EmailComposer
   ]
 })
 

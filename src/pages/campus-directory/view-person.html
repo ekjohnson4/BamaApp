@@ -10,24 +10,21 @@
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
   </ion-navbar>
-  <ion-searchbar
-    [(ngModel)]="searchInput"
-    [showCancelButton]="shouldShowCancel"
-    [autocorrect]="shouldAutocomplete"
-    (change)= "search($event)"
-    placeholder="Search Campus Directory">
-  </ion-searchbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list [virtualScroll]="names">
-      <ion-list-header>
-        {{ header }}
-      </ion-list-header>
-      <button ion-item *virtualItem="let name" (click)="listClicked(name)">
-        {{ name }}
-      </button>
-  </ion-list>
+  <ion-item class="name">{{name}}</ion-item>
+  <ion-label>Department</ion-label>
+  <ion-item>{{department}}</ion-item>
+
+  <ion-label>Email</ion-label>
+  <button ion-item (click)="makeEmail(email)">{{email}}</button>
+
+  <ion-label>Phone</ion-label>
+  <button ion-item (click)="callPhone(phone)">{{phone}}</button>
+
+  <ion-label>Office</ion-label>
+  <ion-item>{{office}}</ion-item>
 </ion-content>
 
 <ion-footer>
