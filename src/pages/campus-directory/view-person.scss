@@ -16,9 +16,11 @@ page-view-person {
     }
   }
   ion-content {
-    text-align: center;
+    text-align: start;
+    .name {
+      font-size: large;
+    }
   }
-
   font-family: Helvetica;
   background-color: white;
 }

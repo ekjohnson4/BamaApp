@@ -10,4 +10,4 @@ import { ViewPerson } from './view-person';
     IonicPageModule.forChild(ViewPerson),
   ],
 })
-export class EmergencyModule {}
+export class ViewPersonModule {}
