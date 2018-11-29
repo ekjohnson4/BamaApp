@@ -47,6 +47,7 @@ import { Article8Page } from '../pages/news/articles/article8';
 import { Article9Page } from '../pages/news/articles/article9';
 import { Article10Page } from '../pages/news/articles/article10';
 import { Burke } from '../pages/laundry/burke';
+import { Friedman } from '../pages/laundry/friedman';
 import { DiningDollars } from '../pages/student/subpages/action-card/dining-dollars';
 import { BamaCash } from '../pages/student/subpages/action-card/bama-cash';
 import { DepartmentInfo } from '../pages/course-catalog/department-info/department-info';
@@ -99,6 +100,7 @@ import {ViewPerson} from "../pages/campus-directory/view-person";
     Article9Page,
     Article10Page,
     Burke,
+    Friedman,
     DiningDollars,
     BamaCash,
     DepartmentInfo,
@@ -152,6 +154,7 @@ import {ViewPerson} from "../pages/campus-directory/view-person";
     Article9Page,
     Article10Page,
     Burke,
+    Friedman,
     DiningDollars,
     BamaCash,
     DepartmentInfo,
