@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="black"></ion-icon>
+    </button>
+    <button end ion-button menuToggle="right">
+      <ion-icon name="contact" color="black"></ion-icon>
+    </button>
+    <ion-title (click)="goToPage(1)">
+      <img width="45" height="45" src='../../assets/imgs/logo2.png'>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title>Friedman Laundry</ion-title>
+<img width="100%" src='../../assets/imgs/friedman.png' alt="Laundry Room">
+<ion-list>
+<ion-item-group>
+<ion-item>1 <font color="red">15 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>2 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>3 <font color="red">16 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>4 <font color="red">1 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>5 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>6 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>7 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>8 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>9 <font color="red">22 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>10 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>11 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>12 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>13 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>14 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>15 <font color="red">28 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>16 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>17 <font color="red">31 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>18 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>19 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>20 <font color="red">11 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>21 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>22 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>23 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>24 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>25 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>26 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>27 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>28 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>29 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>30 <font color="red">2 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>31 <font color="red">3 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>32 <font color="#B6B30D"><span item-end>Idle</span></font></ion-item>
+<ion-item>33 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>34 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>35 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>36 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>37 <font color="red">29 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>38 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>39 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>40 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>41 <font color="red">43 min remaining<button ion-button clear float-right (click) = "btnClicked()">Notify</button></font></ion-item>
+<ion-item>42 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>43 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>44 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>45 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>46 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>47 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>48 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>49 <font color="green"><span item-end>Available</span></font></ion-item>
+<ion-item>50 <font color="green"><span item-end>Available</span></font></ion-item>
+</ion-item-group>
+</ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only color="black" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { Burke } from './burke';
+import { Friedman } from './friedman';
 
 @IonicPage()
 @Component({
@@ -47,6 +48,9 @@ export class Laundry {
   btnClicked1(){
     if(this.room == 'a'){
      this.navCtrl.push(Burke);
+    }
+    if(this.room == 'b'){
+    this.navCtrl.push(Friedman);
     }
   }
 }
