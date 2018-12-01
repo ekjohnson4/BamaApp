@@ -15,8 +15,23 @@ import { IonicPage, NavController, NavParams, LoadingController, Content, Events
 })
 export class Article1Page {
   @ViewChild(Content) content: Content;
+  fontSize: number = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public eventMenu: Events) {
+    
+    this.eventMenu.subscribe('change:font', (data) =>{
+      this.fontSize = data;
+      const body = document.getElementById('test-font');
+      if(this.fontSize == 1) {
+        body.setAttribute('style',`font-size: 100%`);
+      }
+      else if(this.fontSize == 2) {
+        body.setAttribute('style',`font-size: 130%`);
+      }
+      else {
+        body.setAttribute('style',`font-size: 160%`);
+      }
+  });
   }
 
   ionViewDidLoad() {
