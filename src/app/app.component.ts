@@ -158,6 +158,10 @@ export class MyApp {
 
   onChange() {
     console.log(this.fontSize);
+    if(this.nav.getActive().name == "Article1Page") {
+      console.log("Changing font size on article1page");
+      this.eventMenu.publish('change:font', this.fontSize);
+    }
   }
   
   signIn() {
