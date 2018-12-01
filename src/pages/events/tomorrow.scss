@@ -18,6 +18,15 @@ page-tomorrow {
   ion-content {
       text-align: center;
   }
+  
+  a:active {
+    background-color: #E8E8E8;
+    text-decoration: underline;
+  }
+  
+  p {
+    text-align: left;
+  }
 
   font-family: Helvetica;
   background-color: white;

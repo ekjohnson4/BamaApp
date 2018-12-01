@@ -116,8 +116,8 @@ export class CampusEvents {
   }
   news6(){
         let alert = this.alertCtrl.create({
-          title:'New Staff Orientation',
-          subTitle:'Date: Monday, November 19, 2018\nTime: 08:30 AM - 12:00 PM\nLocation: Classroom Employee Resource Center',
+          title:'Tuscaloosa Bicentennial Exhibit Series: Tuscaloosa and the Capital Period',
+          subTitle:'<b>Date:</b> Monday, November 30th, 2018<br/><b>Time:</b> 10:00 AM - 04:30 PM<br/><b>Location:</b> Across from the Tuscaloosa Public Library Mildred Westervelt Warner Transportation Museum<br><br>Come see the Tuscaloosa Bicentennial Exhibit Series showcase the history of the city learned from the archaeological excavations of the Bank of the State site in downtown Tuscaloosa.',
           buttons:['Done']
         });
         alert.present();

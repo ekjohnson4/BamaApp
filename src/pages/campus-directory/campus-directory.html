@@ -10,17 +10,18 @@
       <img width="45" height="45" src='../../assets/imgs/logo2.png'>
     </ion-title>
   </ion-navbar>
-      <ion-searchbar
-        [(ngModel)]="searchInput"
-        [showCancelButton]="shouldShowCancel"
-        [autocorrect]="shouldAutocomplete"
-        (ionInput)="search($event)"
-        (ionCancel)="onCancel($event)"
-        placeholder="Search Campus Directory">
-      </ion-searchbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-title>Campus Directory</ion-title><br>
+  <ion-searchbar
+    [(ngModel)]="searchInput"
+    [showCancelButton]="shouldShowCancel"
+    [autocorrect]="shouldAutocomplete"
+    (ionInput)="search($event)"
+    (ionCancel)="onCancel($event)"
+    placeholder="Search Campus Directory">
+  </ion-searchbar>
   <ion-list [virtualScroll]="names">
       <ion-list-header>
         {{ header }}
