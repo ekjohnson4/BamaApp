@@ -54,7 +54,7 @@ export class MyTickets {
       else{
         let alert = this.alertCtrl.create({
           title:'Transfer Error',
-          subTitle:'No ticket..',
+          subTitle:'No ticket...',
           buttons:['OK']
         });
         alert.present();
@@ -75,7 +75,7 @@ export class MyTickets {
       else{
         let alert = this.alertCtrl.create({
           title:'Donate Error',
-          subTitle:'No ticket..',
+          subTitle:'No ticket...',
           buttons:['OK']
         });
         alert.present();

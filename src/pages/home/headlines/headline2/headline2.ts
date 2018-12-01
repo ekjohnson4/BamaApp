@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Content, Events } from 'ionic-angular';
-import { HomePage } from '../../home';
 
 @IonicPage()
 @Component({
