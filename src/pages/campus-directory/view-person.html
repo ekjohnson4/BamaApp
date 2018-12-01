@@ -13,23 +13,28 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-title>Campus Directory</ion-title>
   <ion-card>
-    <ion-card-header class="name">{{name}}</ion-card-header>
+    <ion-card-header class="name" style="font-weight: bold;">Name: {{name}}</ion-card-header>
   </ion-card>
   <ion-card>
-    <ion-card-header>Department</ion-card-header>
+    <ion-card-header style="font-weight: bold;">Department</ion-card-header>
+    <hr>
     <ion-card-content>{{department}}</ion-card-content>
   </ion-card>
   <ion-card>
-    <ion-card-header>Email</ion-card-header>
+    <ion-card-header style="font-weight: bold;">Email</ion-card-header>
+    <hr>
     <ion-card-content (click)="makeEmail(email)">{{email}}</ion-card-content>
   </ion-card>
   <ion-card>
-    <ion-card-header>Phone</ion-card-header>
+    <ion-card-header style="font-weight: bold;">Phone</ion-card-header>
+    <hr>
     <ion-card-content (click)="callPhone(phone)">{{phone}}</ion-card-content>
   </ion-card>
   <ion-card>
-    <ion-card-header>Office</ion-card-header>
+    <ion-card-header style="font-weight: bold;">Office</ion-card-header>
+    <hr>
     <ion-card-content>{{office}}</ion-card-content>
   </ion-card>
 </ion-content>

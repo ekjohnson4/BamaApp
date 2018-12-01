@@ -40,13 +40,13 @@ export class Week {
     this.navCtrl.pop();
   }
   news1(){
-        let alert = this.alertCtrl.create({
-          title:'Alabama Types: Poets, Playwrights & Storytellers',
-          subTitle:'<b>Date:</b> Friday, November 30, 2018<br/><b>Time:</b> 09:00 AM - 05:00 PM<br/><b>Location:</b> University of Alabama gallery at the Dinah Washington Cultural Arts Center<br/><b>Cost:</b> FREE</br></br> Alabama Types: Poets, Playwrights & Storytellers, will open in The University Gallery, 620 Greensboro Avenue, Tuscaloosa, for the city’s First Friday art walk, November 2, and run through December 7, 2018.  The Tuscaloosa show will conclude a Southeastern traveling exhibition of vintage typewriters, arranged by The Southern Literary Trail and made possible by LAPD Commission President Steve Soboroff who has accumulated “the world’s greatest typewriter collection” per The Huffington Post.  The Soboroff Collection was first exhibited in the Paley Center for Media in Beverly Hills, California, and attracted nationwide press attention.  ',
-          buttons:['Done']
-        });
-        alert.present();
-  }
+      let alert = this.alertCtrl.create({
+        title:'Alabama Types: Poets, Playwrights & Storytellers',
+        subTitle:'<b>Date:</b> Friday, November 30, 2018<br/><b>Time:</b> 09:00 AM - 05:00 PM<br/><b>Location:</b> University of Alabama gallery at the Dinah Washington Cultural Arts Center<br/><b>Cost:</b> FREE</br></br>The exhibit here at the University Gallery will feature the Soboroff Typewriter Collection and additional artifacts from some of the greatest writers in history, most with a connection to the state of Alabama.',
+        buttons:['Done']
+      });
+      alert.present();
+}
     news2(){
         let alert = this.alertCtrl.create({
           title:'Education Abroad Speed Advising',
