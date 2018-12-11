@@ -54,21 +54,41 @@ export class Friedman {
         }
           ]
         });
+        let alert2 = this.alertCtrl.create({
+          title:'Invalid phone number',
+          subTitle:'Please enter valid phone number ex. (xxx-xxx-xxxx)',
+          buttons:[
+          {
+                    text: 'Try again',
+
+        }
+          ]
+        });
         let alert = this.alertCtrl.create({
           title:'Notify When Done',
-          subTitle:'Input phone number:',
+          subTitle:'Input phone number (xxx-xxx-xxxx):',
                 inputs: [ 
         {
           name: 'phone',
           placeholder: 'Phone Number',
-          type: 'tel'
+          type: 'text'
         },
       ],
       buttons: [
         {
           text: 'Notify',
-          handler: data => {
-                        alert1.present();
+          handler: (data: any) => {
+                        console.log(data.phone);
+                        var phoneRe = /^[2-9]\d{2}[2-9]\d{2}\d{4}$/;
+                        var digits = data.phone.replace(/\D/g, "");
+                        var test = phoneRe.test(digits);
+                        console.log("test is " + test);
+                        if(test == false) {
+                          alert2.present();
+                        }
+                        else {
+                          alert1.present();
+                        }
                     }
         }
       ]
